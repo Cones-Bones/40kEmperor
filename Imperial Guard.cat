@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="32f2-0953-3a19-b2e6" name="Imperial Guard" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="32f2-0953-3a19-b2e6" name="Imperial Guard" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <forceEntries>
     <forceEntry id="fe0e-3c3e-b918-f97e" name="Imperial Guard Battalion" hidden="false">
       <categoryLinks>
@@ -2903,72 +2903,6 @@ While at least one model with a voxcaster is present on the battlefield and not 
                   </costs>
                 </selectionEntry>
               </selectionEntries>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Two may take a weapon from this list:" id="c99a-59f8-e5d9-4b32" hidden="false">
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b0cc-10c1-ad10-b4dd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="LongLas" hidden="false" id="9d55-b0f0-b75a-db8e">
-                      <costs>
-                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Long las" id="aee5-513c-15ec-ba9e" hidden="false" type="profile" targetId="7174-7db4-b3da-e936"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="7ebd-9502-e1c4-d077">
-                      <costs>
-                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Flamer" id="6ab2-93ea-efa7-ce54" hidden="false" type="profile" targetId="2235-5b67-fa95-0a27"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Heavy Stubber" hidden="false" id="e4c1-576d-6993-38cc">
-                      <costs>
-                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Heavy Stubber" id="b527-bebe-87b5-b717" hidden="false" type="profile" targetId="2f99-7a46-2a42-8b9f"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Meltagun" hidden="false" id="896b-d307-e2c6-90bb">
-                      <costs>
-                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Meltagun" id="3ca4-6220-696c-a4fb" hidden="false" type="profile" targetId="15cf-000e-a434-a3ad"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Plasma Gun" hidden="false" id="8617-5fd2-711a-e61a">
-                      <costs>
-                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Plasma Gun" id="fa69-4d26-70a7-2c98" hidden="false" type="profile" targetId="da38-b09b-1ae5-a286"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="0a0a-acf9-fc4d-b7b4">
-                      <costs>
-                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Grenade Launcher (Frag)" id="272e-12e5-bda1-2b0e" hidden="false" type="profile" targetId="da54-c5bd-0d32-55e1"/>
-                        <infoLink name="Grenade Launcher (Krak)" id="08d2-eccd-78c8-5da1" hidden="false" type="profile" targetId="4358-0ce8-ae2e-4b2a"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="36c9-2310-55e2-f18c">
-                      <infoLinks>
-                        <infoLink name="Sniper Rifle" id="a921-79ad-8caf-53f8" hidden="false" type="profile" targetId="1425-9cc6-6275-3f09"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
@@ -3224,8 +3158,8 @@ While at least one model with a voxcaster is present on the battlefield and not 
         <profile name="Chimera" typeId="e117-4193-8756-1465" typeName="Transport" hidden="false" id="fef0-96a9-6906-8578">
           <characteristics>
             <characteristic name="Capacity" typeId="0d1f-94e8-8176-5482">14</characteristic>
-            <characteristic name="Fire Points" typeId="80f0-dbea-cb89-3528">Two models can fire from the Chimera&apos;s Top Hatch. </characteristic>
-            <characteristic name="Access Points" typeId="65ec-159a-b517-6f9e">One access point at the rear. </characteristic>
+            <characteristic name="Fire Points" typeId="80f0-dbea-cb89-3528">Two models can fire from the Chimera&apos;s Top Hatch.</characteristic>
+            <characteristic name="Access Points" typeId="65ec-159a-b517-6f9e">One access point at the rear.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3542,7 +3476,7 @@ While at least one model with a voxcaster is present on the battlefield and not 
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Long Las" hidden="false" id="2eb1-df53-7e31-8af5">
           <infoLinks>
-            <infoLink name="Long Las" id="34c3-c7a4-e0ab-a51a" hidden="false" type="profile" targetId="7174-7db4-b3da-e936"/>
+            <infoLink name="Long las" id="34c3-c7a4-e0ab-a51a" hidden="false" type="profile" targetId="7174-7db4-b3da-e936"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="3"/>
