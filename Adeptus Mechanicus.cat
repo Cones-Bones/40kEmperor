@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="2ca2-ac19-6315-af7d" name="Adeptus Mechanicus" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+  <entryLinks>
+    <entryLink id="ed61-e00f-9f30-ca68" name="Forge World and Allegiance" hidden="false" collective="false" import="true" targetId="56b6-2712-5967-8f5c" type="selectionEntry"/>
+    <entryLink id="ab40-3dbe-9012-f0b8" name="Skitarii Rangers" hidden="false" collective="false" import="true" targetId="b88a-2387-e5cf-d012" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c484-c940-2ff6-1068" name="Troops" hidden="false" targetId="644a-f3d4-2643-0e0b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
+  <sharedSelectionEntries>
+    <selectionEntry id="56b6-2712-5967-8f5c" name="Forge World and Allegiance" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43f3-1663-fdd4-ce7c" type="min"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dd6c-acde-3cf4-1c97" name="Forge World" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a644-9456-cb9c-d8c1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f10d-3838-da3f-59fe" name="Mars" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="56b6-2712-5967-8f5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b36-5024-3d71-bbbf" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="272c-13fe-6a08-f786" name="Stygies VIII" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="56b6-2712-5967-8f5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="514f-c11d-b787-a865" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6a3e-faa9-6ffe-a47d" name="Ryza" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="56b6-2712-5967-8f5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b36-5024-3d71-bbbf" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ecc7-2425-908e-3567" name="Graia" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="56b6-2712-5967-8f5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="514f-c11d-b787-a865" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="86d7-5fe1-4df8-804b" name="Agripinaa" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="56b6-2712-5967-8f5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8fb-0954-aa84-bdd8" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="295d-01d8-ebda-132d" name="Metalica" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="56b6-2712-5967-8f5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8fb-0954-aa84-bdd8" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="487f-e036-b78a-1d4a" name="Allegiance" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="586f-7b33-37e0-e7ce" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2b36-5024-3d71-bbbf" name="The Sol Alliance" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="514f-c11d-b787-a865" name="The Forces of Guillimun" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b8fb-0954-aa84-bdd8" name="The Forces of the Lion" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b88a-2387-e5cf-d012" name="Skitarii Rangers" hidden="false" collective="false" import="true" type="upgrade">
+      <rules>
+        <rule id="a08d-8922-0bc7-ad08" name="Doctrina Imperatives" hidden="false">
+          <description>At the start of your Movement phase, you can choose up to one Doctrina Imperative. Unless otherwise stated, each Doctrina Imperative can only be used once during the game.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="14a4-8ec3-83e6-a5b0" name="Feel No Pain" hidden="false" targetId="f3a2-c2b0-6b0e-1653" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(6+)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="bf03-fb8a-a25d-ddaf" name="Move Through Cover" hidden="false" targetId="9ace-eb05-c579-57cb" type="rule"/>
+        <infoLink id="4d5e-3f3e-e26c-3cbd" name="Relentless" hidden="false" targetId="37e2-a92b-40b4-d7cc" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="fb13-b351-80eb-38d7" name="Skitarii Ranger" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1708-18e1-4dac-6db6" type="max"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8422-c40a-9378-e047" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ef9f-03f8-96ca-f9c5" name="Skitarii Ranger" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry</characteristic>
+                <characteristic name="WS" typeId="e8fa-a6b3-0e8c-18aa">3</characteristic>
+                <characteristic name="BS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="S" typeId="565d-bf36-9e7e-29b5">3</characteristic>
+                <characteristic name="T" typeId="23ae-6026-aebd-abc3">3</characteristic>
+                <characteristic name="W" typeId="f6db-a6a5-71d2-71c5">1</characteristic>
+                <characteristic name="I" typeId="a763-cbc8-2080-a4fb">3</characteristic>
+                <characteristic name="A" typeId="ea41-893b-3f82-5482">1</characteristic>
+                <characteristic name="Ld" typeId="d535-b745-b613-a7ab">8</characteristic>
+                <characteristic name="Save" typeId="3b5e-ab67-ed36-a88f">4+</characteristic>
+                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="11"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0772-c9e7-a98f-99a9" name="Ranger Alpha" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80ed-7fe9-cd84-55ab" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c64a-3548-fc3c-ac16" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ca27-6e2c-523e-0192" name="Ranger Alpha" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Character)</characteristic>
+                <characteristic name="WS" typeId="e8fa-a6b3-0e8c-18aa">3</characteristic>
+                <characteristic name="BS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="S" typeId="565d-bf36-9e7e-29b5">3</characteristic>
+                <characteristic name="T" typeId="23ae-6026-aebd-abc3">3</characteristic>
+                <characteristic name="W" typeId="f6db-a6a5-71d2-71c5">2</characteristic>
+                <characteristic name="I" typeId="a763-cbc8-2080-a4fb">3</characteristic>
+                <characteristic name="A" typeId="ea41-893b-3f82-5482">2</characteristic>
+                <characteristic name="Ld" typeId="d535-b745-b613-a7ab">4+</characteristic>
+                <characteristic name="Save" typeId="3b5e-ab67-ed36-a88f"/>
+                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="02f7-e4b0-e164-3f77" name="Melee Weapon" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="973d-01d8-cf6f-3973" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="e6bc-7305-0e0a-5965" name="Taser Goad" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="fe8c-7438-d152-a830" name="Power Sword" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="a51e-331e-86fb-09de" name="Arc Maul" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="91a1-1df3-455d-eb30" name="May replace Rifle with:" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c236-c987-c65e-e564" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="5805-d6b4-d21e-12b9" name="Arc Pistol" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="882c-e419-e5b4-9a5f" name="Radium Pistol" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="ee6a-9c90-ed92-1d3d" name="Phosphor Blast Pistol" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="d434-2ea9-ba1e-dd87" name="May take any of the following: " hidden="false" collective="false" import="true">
+              <selectionEntries>
+                <selectionEntry id="1f7f-9cd3-3041-c67e" name="Refractor Field" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="9fae-309c-6c46-568c" value="0">
+                      <conditions>
+                        <condition field="selections" scope="0772-c9e7-a98f-99a9" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cb5-496c-8d69-1c45" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fae-309c-6c46-568c" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="4cb5-496c-8d69-1c45" name="Conversion Field" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="0cb7-cb34-5938-c0fe" value="0">
+                      <conditions>
+                        <condition field="selections" scope="0772-c9e7-a98f-99a9" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f7f-9cd3-3041-c67e" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cb7-cb34-5938-c0fe" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="80f6-eb2e-f8a3-cc66" name="Digital Weapons" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d27-d8ff-d560-f82d" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="1"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5720-b92e-49be-0aad" name="Galvanic Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0431-07f1-af29-75e8" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd12-ff3b-6cee-cc9d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="8d7a-c772-5144-fb7d" name="Galvanic Rifle" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">30&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Rapid Fire, Precision Shots</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e7ac-7db4-a114-723e" name="Precision Shots" hidden="false" targetId="f973-ed50-2ef2-1ffd" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7583-bd4d-8f07-9d98" name="May take either:" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f16-8262-21be-b24b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5738-87fe-461c-293d" name="Enhanced data-tether" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="07b8-41ce-a4b1-8b11" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="84e6-2d94-1db0-37f4" name="Enhanced data-tether" hidden="false">
+                  <description>Whenever a unit with an enhanced data-tether is affected by a Doctrina Imperative, all models in the unit add 1 to the Leadership characteristic on their profile until the start of your next turn. Note this is not cumulative with the effects of a broad spectrum data-tether.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a188-15c2-b368-638d" name="Omnispex" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9ae-4e3d-5675-9185" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="8317-3832-736c-6526" name="Omnispex" hidden="false">
+                  <description>Cover saves taken against attacks made by a unit that contains at least one model equipped with an omnispex are made with a -1 modifier.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="fbb6-20bc-ce33-e528" name="Canticles of the Omnissiah" hidden="false" collective="false" import="true">
+      <rules>
+        <rule id="660c-674b-3804-8d35" name="Canticles of the Omnissiah" hidden="false">
+          <description>At the start of each of your turns, you can choose one Canticle of the Omnissiah from the list below. The effects of each Canticle last until the start of your next turn. Unless otherwise stated, each Canticle can only be used once during the game.
+
+The strength of each Canticle varies according to the number of units performing it. At the start of your turn, add up the number of friendly units on the battlefield that have the Canticles of the Omnissiah special rule and apply the appropriate level of effect. Do not include units that are Falling Back in this total. Once a Canticle has been activated it remains at that level of effect until the beginning of your next turn, even if the number of units performing it changes during that turn.
+
+The following special rules and characteristic modifiers apply to all friendly units with the Canticles of the Omnissiah special rule.</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry id="9f55-0754-a4a6-cea1" name="Benediction of Omniscience" hidden="false" collective="false" import="true" type="upgrade">
+          <rules>
+            <rule id="a625-0a33-95ad-e19c" name="Benediction of Omniscience" hidden="false">
+              <description>Those blessed enough to comprehend this blaring vox-prayer find their targeting reticules guided by the Omnissiah’s own vigilance.
+
+Units	Effects
+1-3	Re-roll failed To Hit rolls of 1 when making shooting attacks. 
+4-7	Re-roll failed To Hit rolls of 1 or 2 when making shooting attacks. 
+8+	Re-roll all failed To Hit rolls when making shooting attacks.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a068-460c-2096-9217" name="Chant of the Remorseless Fist" hidden="false" collective="false" import="true" type="upgrade">
+          <rules>
+            <rule id="295c-3d8a-7ac1-45c6" name="Chant of the Remorseless Fist" hidden="false">
+              <description>In spitting out a staccato chant to the Motive Force, the faithful warriors of the Cult Mechanicus are filled with merciless surety as well as intent.
+
+Units	Effects
+1-3	Re-roll failed To Hit rolls of a 1 when making close combat attacks. 
+4-7	Re-roll failed To Hit rolls of a 1 or a 2 when making close combat attacks. 
+8+	Re-roll all failed To Hit rolls when making close combat attacks.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d7ef-3c71-4e9c-5041" name="Incantation of the Iron Soul" hidden="false" collective="false" import="true" type="upgrade">
+          <rules>
+            <rule id="7401-04ac-11fa-38f3" name="Incantation of the Iron Soul" hidden="false">
+              <description>Raising their voices in binharic praise, the Disciples of the Machine God bolster their spirits with the surety of iron.
+
+Units	Effects
+1-3	Stubborn. 
+4-7	Stubborn, and must re-roll all failed Morale, Fear and Pinning tests. 
+8+	Fearless.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="918b-7e40-567a-103e" name="Invocation of Machine-might" hidden="false" collective="false" import="true" type="upgrade">
+          <rules>
+            <rule id="6d30-522c-4b86-1bb0" name="Invocation of Machine-might" hidden="false">
+              <description>The Tech-Priests lead their minions in a binharic prayer that sends miraculous strength surging through tendons, wires and pistons.
+
+Units	Effects
+1-3	+1 Strength. 
+4-7	+2 Strength. 
+8+	+3 Strength</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4f9f-d5cb-9f55-f22b" name="Litany of the Electromancer" hidden="false" collective="false" import="true" type="upgrade">
+          <rules>
+            <rule id="a67a-33db-bc83-e43f" name="Litany of the Electromancer" hidden="false">
+              <description>Summoning the spark of the Machine God&apos;s divinity that burns within them, the Omnissiah’s faithful manifest blazing auras of energy that lay low the unbeliever.
+
+Units	Effects
+1-3	Enemy units suffer a single Strength 4 AP- hit for each model with the Canticles of the Omnissiah special rule in units that they are locked in combat with, resolved at the Initiative 10 step of the Fight sub-phase. 
+4-7	Enemy units suffer two Strength 4 AP- hits for each model with the Canticles of the Omnissiah special rule in units that they are locked in combat with, resolved at the Initiative 10 step of the Fight sub-phase. 
+8+	Enemy units suffer three Strength 4 AP- hits for each model with the Canticles of the Omnissiah special rule in units that they are locked in combat with, resolved at the Initiative 10 step of the Fight sub-phase.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="db89-d39b-8abb-2873" name="Shroudpsalm" hidden="false" collective="false" import="true" type="upgrade">
+          <rules>
+            <rule id="286d-720c-08fb-5060" name="Shroudpsalm" hidden="false">
+              <description>Robot, servitor and priest shift their binharic emissions into the visible spectra, the static pouring from their vox-grilles manifesting as an electromagnetic storm that hides them from the foe.
+
+Units	Effects
+1-3	Stealth. 
+4-7	Shrouded. 
+8+	Stealth and Shrouded.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>

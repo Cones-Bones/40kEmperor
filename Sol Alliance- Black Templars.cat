@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="8d0d-e6ee-d5f5-22ad" name="Sol Alliance- Black Templars" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+  <entryLinks>
+    <entryLink id="8307-81b1-ff1d-7c63" name="Black Templars" hidden="false" collective="false" import="true" targetId="4751-db4a-8b37-51e0" type="selectionEntry"/>
+    <entryLink id="5a17-447f-df0b-56b8" name="Crusader Squad" hidden="false" collective="false" import="true" targetId="5de5-ab45-ddb0-6963" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="e0be-1ef6-f62a-ff52" name="Troops" hidden="false" targetId="644a-f3d4-2643-0e0b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1b9f-7b9c-1b76-3be5" name="High Marshal Helbrecht" hidden="false" collective="false" import="true" targetId="c982-eb87-6c80-1650" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c00a-4c50-5806-124a" name="HQ" hidden="false" targetId="6375-3e5f-be64-925e" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f71d-497c-87a3-d3ea" name="Sword Brethren" hidden="false" collective="false" import="true" targetId="6caf-0626-35d9-d475" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="8780-8290-b05f-d886" name="Elites" hidden="false" targetId="ebc5-5615-35fb-bc91" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
+  <sharedSelectionEntries>
+    <selectionEntry id="4751-db4a-8b37-51e0" name="Black Templars" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9aed-b1f2-d58d-42f8" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b89-ac58-4cec-731c" type="min"/>
+      </constraints>
+      <rules>
+        <rule id="f5a8-0ca4-d842-5eeb" name="Black Templars" hidden="false">
+          <description>Black Templars models have the Crusader and Adamantium Will (5+) special rules.
+If a Black Templars unit suffers one or more casualties in the Shooting phase or as a result of Overwatch or Return Fire, all models in that unit gain the Counter-attack (1) and Rage (2) special rules until the end of the turn.
+
+No model with psychic powers may be fielded by or as an ally of the Black Templars with the exception of the Grey Knights.</description>
+        </rule>
+        <rule id="b299-31b7-42a6-41ee" name="Bolter Discipline" hidden="false">
+          <description>Instead of following the normal rules for Rapid Fire weapons, models in this unit shooting Rapid Fire bolt weapons make double the number of attacks if any of the following apply:
+The shooting model’s target is within half the weapon’s range.
+The shooting model is INFANTRY and its unit Remained Stationary in your previous Movement phase.</description>
+        </rule>
+        <rule id="b606-6941-81bf-3da3" name="Righteous Zeal" hidden="false">
+          <description>Black Templars automatically pass Fear and Regroup tests. When regrouping, Black Templars units do not make a 3&quot; Regroup move, but can instead move, shoot, run or declare charges normally in that turn. Further, Black Templars units caught by a Sweeping Advance are not destroyed, they instead remain locked in combat.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="ae57-0f3e-3ee1-22c0" name="Crusader" hidden="false" targetId="9e9f-d95e-6c06-ff3b" type="rule"/>
+        <infoLink id="d1d0-7d8e-a159-d916" name="Adamantium Will" hidden="false" targetId="e665-d068-6f9e-bf71" type="rule"/>
+        <infoLink id="b544-6cd5-0a5f-e500" name="Counter-Attack" hidden="false" targetId="2a25-a0c2-2424-ea88" type="rule"/>
+        <infoLink id="c06a-d56a-51f2-50f5" name="Rage" hidden="false" targetId="8c0c-8856-f1ab-923d" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5de5-ab45-ddb0-6963" name="Crusader Squad" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="03c5-262b-2872-11d6" name="Sword Brother" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28f0-9922-8887-9533" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="625d-bcc4-8fa5-6c8a" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c817-704f-bf54-9bfb" name="Sword Brother" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Character)</characteristic>
+                <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">7&quot;</characteristic>
+                <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+                <characteristic name="S" typeId="23ae-6026-aebd-abc3">4</characteristic>
+                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">4</characteristic>
+                <characteristic name="W" typeId="a763-cbc8-2080-a4fb">1</characteristic>
+                <characteristic name="I" typeId="ea41-893b-3f82-5482">4</characteristic>
+                <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
+                <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
+                <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
+                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink id="6d05-6d68-c655-6f57" name="Pistol Weapons:" hidden="false" collective="false" import="true" targetId="66a2-2d36-fa0f-d7fb" type="selectionEntryGroup"/>
+            <entryLink id="2193-0cbe-4919-2b14" name="Melee Weapons List:" hidden="false" collective="false" import="true" targetId="40b1-a419-4e5a-5a74" type="selectionEntryGroup"/>
+            <entryLink id="8255-96c8-e15b-dcf4" name="Holy Orb of Antioch" hidden="false" collective="false" import="true" targetId="cb5f-78a8-7400-2134" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0bbb-f105-744c-dee3" name="Initiate" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="ecef-981f-a13b-3b6c" name="Initiate" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="11" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56ec-6f9f-a5e6-1987" type="max"/>
+                <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab9a-5e4c-f167-2a14" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="3554-8ce0-18c3-4e69" name="Initiate" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry</characteristic>
+                    <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">7&quot;</characteristic>
+                    <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                    <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+                    <characteristic name="S" typeId="23ae-6026-aebd-abc3">4</characteristic>
+                    <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">4</characteristic>
+                    <characteristic name="W" typeId="a763-cbc8-2080-a4fb">1</characteristic>
+                    <characteristic name="I" typeId="ea41-893b-3f82-5482">4</characteristic>
+                    <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
+                    <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">7</characteristic>
+                    <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
+                    <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="56eb-967e-3d77-3e89" name="Neophyte" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="8dd7-7ca5-7f4b-f683" name="Neophyte" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="8" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6ca-8748-8f9b-a75b" type="max"/>
+                <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="817a-f84f-1663-fbdf" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="0a52-9bd2-8456-d8f7" name="Neophyte" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry</characteristic>
+                    <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">7&quot;</characteristic>
+                    <characteristic name="WS" typeId="9660-0df5-9c5d-3604">3</characteristic>
+                    <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">3</characteristic>
+                    <characteristic name="S" typeId="23ae-6026-aebd-abc3">4</characteristic>
+                    <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">4</characteristic>
+                    <characteristic name="W" typeId="a763-cbc8-2080-a4fb">1</characteristic>
+                    <characteristic name="I" typeId="ea41-893b-3f82-5482">4</characteristic>
+                    <characteristic name="A" typeId="d535-b745-b613-a7ab">1</characteristic>
+                    <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">6</characteristic>
+                    <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">4+</characteristic>
+                    <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="8"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6c22-ff71-d3e2-e118" name="Initiates Weapon Choice:" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a97c-2ef2-8f2f-5f07" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bec8-3b14-580d-3cbc" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="73b5-9d8e-f8a3-c881" name="Heavy Bolt Pistol and Chainsword" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f19b-ec26-a9be-5eca" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="5ddc-c057-7b4b-1696" name="Heavy Bolt Pistol" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">18&quot;</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="d5dd-4917-0f98-8e52" name="Astartes Chainsword" hidden="false" targetId="da5a-7e6e-09ff-de27" type="profile"/>
+                <infoLink id="817c-b0eb-d8a3-5712" name="Shred" hidden="false" targetId="41bc-ce18-3e6f-897f" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="2be3-746b-4e67-72f6" name="Auto Bolt Rifle" hidden="false" collective="false" import="true" targetId="5f8b-d238-f934-8eaa" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="be85-2dd8-2e26-40b3" name="Neophytes Weapon Choice:" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82e0-c725-9162-e5e4" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="939d-828f-be4b-572e" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a97e-dee7-61f5-56e1" name="Bolt Pistol &amp; Chainsword" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cfe-1512-5686-c7a8" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8ef9-8a66-06c6-f4e5" name="Bolt Pistol" hidden="false" targetId="2cb8-e71e-1b53-17fc" type="profile"/>
+                <infoLink id="1a86-6481-8111-b346" name="Astartes Chainsword" hidden="false" targetId="da5a-7e6e-09ff-de27" type="profile"/>
+                <infoLink id="60b7-514d-7e73-5132" name="Shred" hidden="false" targetId="41bc-ce18-3e6f-897f" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="0c66-ec2f-b85c-30a2" name="Bolt Carbine" hidden="false" collective="false" import="true" targetId="2937-fe8b-f371-2602" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="208e-cb4c-65bc-faab" name="Frag and Krak Grenades" hidden="false" collective="false" import="true" targetId="ebfd-f54e-4139-7fc6" type="selectionEntry"/>
+        <entryLink id="ea32-b9b2-9376-3042" name="Black Templars" hidden="false" collective="false" import="true" targetId="4751-db4a-8b37-51e0" type="selectionEntry"/>
+        <entryLink id="a3a1-bcea-095b-727c" name="Crusader Seals" hidden="false" collective="false" import="true" targetId="b846-1fb6-7a8c-c92f" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="e7de-8dcf-403a-b76a" value="2">
+              <repeats>
+                <repeat field="selections" scope="5de5-ab45-ddb0-6963" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c982-eb87-6c80-1650" name="High Marshal Helbrecht" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="f127-9d91-d9e5-9aca" name="High Marshal Helbrecht" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Character)</characteristic>
+            <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">7&quot;</characteristic>
+            <characteristic name="WS" typeId="9660-0df5-9c5d-3604">5</characteristic>
+            <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">5</characteristic>
+            <characteristic name="S" typeId="23ae-6026-aebd-abc3">4</characteristic>
+            <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">4</characteristic>
+            <characteristic name="W" typeId="a763-cbc8-2080-a4fb">4</characteristic>
+            <characteristic name="I" typeId="ea41-893b-3f82-5482">5</characteristic>
+            <characteristic name="A" typeId="d535-b745-b613-a7ab">5</characteristic>
+            <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
+            <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/4++</characteristic>
+            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+          </characteristics>
+        </profile>
+        <profile id="48fe-3794-10b3-71a4" name="Sword of the High Marshals" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+            <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+            <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+            <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Master-crafted, Legacy of Dorn</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="989b-aa9a-335d-0795" name="Crusade of Wrath" hidden="false">
+          <description>Once per game, at the beginning of your Assault phase, High Marshal Helbrecht can grant all friendly Black Templars models the Hatred and Fleet special rules until the end of that phase.</description>
+        </rule>
+        <rule id="6128-512d-d0af-5535" name="Legacy of Dorn" hidden="false">
+          <description>The Sword of the High Marshals gives High Marshal Helbrecht a Charge Bonus of D3 Attacks instead of one.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="e6aa-768c-15fe-9318" name="Combi-Melta (Secondary)" hidden="false" targetId="60ce-118c-f84a-c085" type="profile"/>
+        <infoLink id="ee00-9b51-5606-bd14" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
+        <infoLink id="c2f5-83db-6e3c-dc73" name="Iron Halo" hidden="false" targetId="9604-cc84-8bc0-8118" type="profile"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink id="0bc3-2e9b-f65a-d0d1" name="Black Templars" hidden="false" collective="false" import="true" targetId="4751-db4a-8b37-51e0" type="selectionEntry"/>
+        <entryLink id="68ca-f6c4-108b-952d" name="Frag and Krak Grenades" hidden="false" collective="false" import="true" targetId="ebfd-f54e-4139-7fc6" type="selectionEntry"/>
+        <entryLink id="1073-a91f-578c-eff9" name="Vows of the Black Templars" hidden="false" collective="false" import="true" targetId="e37d-ef50-168e-0920" type="selectionEntryGroup"/>
+        <entryLink id="176c-8994-df2a-47af" name="Holy Orb of Antioch" hidden="false" collective="false" import="true" targetId="cb5f-78a8-7400-2134" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="190"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ebfd-f54e-4139-7fc6" name="Frag and Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="517d-ecd2-c7ce-b7e3" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4495-2f55-3765-1931" type="min"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="5878-0013-0a51-26a1" name="Frag Grenades" hidden="false" targetId="3b31-8ac4-2152-876b" type="profile"/>
+        <infoLink id="9f87-b6ad-a98e-890b" name="Krak Grenades" hidden="false" targetId="9af1-f354-beeb-0bfd" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cb5f-78a8-7400-2134" name="Holy Orb of Antioch" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d4d-bf5c-85d6-c5f6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="af75-8bd3-8103-57ee" name="Holy Orbs of Antioch" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+            <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">6</characteristic>
+            <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+            <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Blast, One Use Only</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b846-1fb6-7a8c-c92f" name="Crusader Seals" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="785b-d8a2-d43a-848f" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="965e-9fa0-e99d-077b" name="Crusader Seals" hidden="false">
+          <description>Waxen vows of piety bestowned upon Black Templars of proven zeal and courage. A Crusader Seal increases the unit&apos;s Adamantium Will special rule to (4+).</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="6caf-0626-35d9-d475" name="Sword Brethren" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry id="56ae-d5d2-6fcc-e15e" name="Sword Brother" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a4b-d617-b283-fdc5" type="max"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fb2-9010-cd01-3b98" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9af7-f3b0-f392-2e0e" name="Sword Brother" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Character)</characteristic>
+                <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">7&quot;</characteristic>
+                <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+                <characteristic name="S" typeId="23ae-6026-aebd-abc3">4</characteristic>
+                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">4</characteristic>
+                <characteristic name="W" typeId="a763-cbc8-2080-a4fb">1</characteristic>
+                <characteristic name="I" typeId="ea41-893b-3f82-5482">4</characteristic>
+                <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
+                <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
+                <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
+                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink id="936b-06f5-fa07-a29f" name="Pistol Weapons:" hidden="false" collective="false" import="true" targetId="66a2-2d36-fa0f-d7fb" type="selectionEntryGroup"/>
+            <entryLink id="e002-3a3c-497d-1234" name="Melee Weapons List:" hidden="false" collective="false" import="true" targetId="40b1-a419-4e5a-5a74" type="selectionEntryGroup"/>
+            <entryLink id="3dc7-ca5f-fdb9-0240" name="Holy Orb of Antioch" hidden="false" collective="false" import="true" targetId="cb5f-78a8-7400-2134" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="c419-e37a-725c-43d4" name="Black Templars" hidden="false" collective="false" import="true" targetId="4751-db4a-8b37-51e0" type="selectionEntry"/>
+        <entryLink id="a254-5186-bc3a-8e6a" name="Crusader Seals" hidden="false" collective="false" import="true" targetId="b846-1fb6-7a8c-c92f" type="selectionEntry">
+          <modifiers>
+            <modifier type="increment" field="e7de-8dcf-403a-b76a" value="2">
+              <repeats>
+                <repeat field="selections" scope="6caf-0626-35d9-d475" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="23ec-bb77-7dfe-3e45" name="Frag and Krak Grenades" hidden="false" collective="false" import="true" targetId="ebfd-f54e-4139-7fc6" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="40b1-a419-4e5a-5a74" name="Melee Weapons List:" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce35-39f2-ea47-a766" type="min"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="438a-fa4f-8d72-f8c0" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="d759-0d5e-1f45-1a0a" name="Astartes Chainsword " hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4417-f648-27b7-8254" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7379-52c6-8387-2efc" name="Astartes Chainsword" hidden="false" targetId="da5a-7e6e-09ff-de27" type="profile"/>
+            <infoLink id="83e3-5877-bbbc-7662" name="Shred" hidden="false" targetId="41bc-ce18-3e6f-897f" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1264-d688-ea1c-8870" name="Power Fist" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c908-7a4b-00d0-73bd" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="902a-8e37-21b2-de75" name="Power Fist" hidden="false" targetId="aa52-17f9-7ced-00e0" type="profile"/>
+            <infoLink id="c236-770d-235b-9758" name="Specialist Weapon" hidden="false" targetId="eb86-e6c7-073c-5338" type="rule"/>
+            <infoLink id="00b6-da4e-05de-2e7f" name="Unwieldy" hidden="false" targetId="69cd-1f57-1f07-a602" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e6f0-d69b-a8b6-b412" name="Power Sword " hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b70c-b9bc-adc0-ee7e" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2a01-8ba5-dbdb-0681" name="Power Sword" hidden="false" targetId="a559-1dfb-6cf5-65c7" type="profile"/>
+            <infoLink id="ed67-f174-2d84-17c0" name="Rending" hidden="false" targetId="daf9-7786-40aa-8807" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c47b-e260-ce92-e4bc" name="Thunder Hammer " hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27a2-69a5-ce91-4f4d" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="17d9-efcc-0cf7-2f56" name="Thunder Hammer" hidden="false" targetId="d3e9-bb5e-d810-d3e7" type="profile"/>
+            <infoLink id="65a4-e94e-9858-ca87" name="Specialist Weapon" hidden="false" targetId="eb86-e6c7-073c-5338" type="rule"/>
+            <infoLink id="260f-2d04-3b89-f613" name="Unwieldy" hidden="false" targetId="69cd-1f57-1f07-a602" type="rule"/>
+            <infoLink id="7fba-e84e-820f-d037" name="Concussive" hidden="false" targetId="f3f1-f153-dabd-995f" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="66a2-2d36-fa0f-d7fb" name="Pistol Weapons:" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="931f-6727-abd4-df52" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d00d-c837-9008-23dc" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="390a-9b08-8bfc-961b" name="Bolt Pistol " hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c515-a6d6-1980-a365" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5f13-c3e7-1397-6d79" name="Bolt Pistol" hidden="false" targetId="2cb8-e71e-1b53-17fc" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="35d2-d95f-256b-4858" name="Grav-Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbc9-b1b4-6b5a-3d98" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="ac82-03f0-f8e9-a893" name="Grav-Pistol" hidden="false" targetId="6ea1-ef59-f4e9-04b8" type="profile"/>
+            <infoLink id="86b8-54ea-1089-4a35" name="Concussive" hidden="false" targetId="f3f1-f153-dabd-995f" type="rule"/>
+            <infoLink id="2e7e-b78d-f516-52e4" name="Graviton" hidden="false" targetId="6b21-d56b-404f-7c28" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0f4e-3615-c784-4626" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1d9-c223-ef49-8bde" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0a4a-d707-101f-5700" name="Plasma Pistol" hidden="false" targetId="6d14-059d-0f3b-1472" type="profile"/>
+            <infoLink id="a87f-9ad6-a5e2-ef37" name="Gets Hot" hidden="false" targetId="5d2d-493d-a032-fc88" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="71b6-cfd4-85de-a2f5" name="Heavy Bolt Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29f3-935a-de08-c759" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0a2d-580e-d10c-3f4b" name="Heavy Bolt Pistol" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">18&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a1e6-6190-b4f4-4896" name="Pyre Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="878a-2d76-9d85-5eba" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2303-7098-5aec-a671" name="Pyre Pistol" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">Template</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="94de-2227-20fc-aa2a" name="Rifles List: " hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="5f8b-d238-f934-8eaa" name="Auto Bolt Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da2a-6cc4-81e2-0f46" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="10d6-010d-f858-2d3f" name="Auto Bolt Rifle" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8354-348f-4f1f-2119" name="Bolt Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="546d-6892-dbb4-fee7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ae27-6baa-14b6-ffa4" name="Bolt Rifle" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">30&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Rapid Fire</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b19a-ae4c-f1fd-129e" name="Stalker Bolt Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a81c-02f7-df38-08d6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cdc6-f65d-0493-54b1" name="Stalker Bolt Rifle" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">36&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2937-fe8b-f371-2602" name="Bolt Carbine" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="484d-4003-14c7-6e72" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="50a7-8e8d-ffbe-cce6" name="Bolt Carbine" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">-</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="e37d-ef50-168e-0920" name="Vows of the Black Templars" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0893-5150-d769-de38" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="cce8-3333-ed05-2fbd" name="Abhor the Witch, Destroy the Witch!" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a141-f82a-4e30-febd" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="36e6-6b4a-189b-1a0d" name="Abhor the Witch, Destroy the Witch!" hidden="false">
+              <description>At the beginning of the game, once all models are deployed but before the first time, if there is a psyker in the enemy army, each unit must make a run move towards the nearest visible enemy unit.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="55d5-940c-79da-d0dc" name="Accept any Challenge, No Matter the Odds!" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7549-19d4-8859-5012" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="f72a-81c5-0554-b773" name="Accept any Challenge, No Matter the Odds!" hidden="false">
+              <description>Black Templar&apos;s characters must issue and accept all challenges in close combat. They gain the Preferred Enemy special rule against any unit they charge, for the remainder of the turn.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="289e-ef9d-eccb-8188" name="Accept any Challenge, No Matter the Odds!" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33e9-9334-fe56-bd2e" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="4abf-d93c-7311-41bb" name="Accept any Challenge, No Matter the Odds!" hidden="false">
+              <description>Black Templar&apos;s characters must issue and accept all challenges in close combat. They gain the Preferred Enemy special rule against any unit they charge, for the remainder of the turn.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0648-606a-407b-2d69" name="Uphold the Honour of the Emperor!" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b30c-7f5c-d88d-5632" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="a717-aab5-726a-a8e8" name="Uphold the Honour of the Emperor!" hidden="false">
+              <description>The Black Templars gain a 6+ Invulnurable save and may never be pinned. However they may never benefit from Cover saves of any kind. Vehicles and Neophytes are unaffected by this vow.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>
