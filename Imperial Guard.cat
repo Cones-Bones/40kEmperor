@@ -3000,7 +3000,15 @@ While at least one model with a voxcaster is present on the battlefield and not 
         <selectionEntry type="upgrade" import="true" name="Tempestor" hidden="false" id="d7be-92f2-a96d-c6d8">
           <entryLinks>
             <entryLink import="true" name="Melee Weapon:" hidden="false" id="f847-11d6-2037-fa64" collective="false" targetId="3cf4-0a8f-7c62-7249" type="selectionEntryGroup"/>
-            <entryLink import="true" name="Ranged Weapon:" hidden="false" id="839f-24d4-46eb-1af4" collective="false" targetId="fcf0-b2eb-cca9-9c5c" type="selectionEntryGroup"/>
+            <entryLink import="true" name="Ranged Weapon:" hidden="false" id="839f-24d4-46eb-1af4" collective="false" targetId="fcf0-b2eb-cca9-9c5c" type="selectionEntryGroup">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Hotshot Laspistol" hidden="false" id="e1bf-7ef7-3d44-6152">
+                  <infoLinks>
+                    <infoLink name="Hot-Shot Laspistol" id="41b9-fca1-4490-45e8" hidden="false" type="profile" targetId="3c49-3308-eda8-2a65"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
           </entryLinks>
           <profiles>
             <profile name="Tempestor" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="5844-3bf4-86aa-9e56">
