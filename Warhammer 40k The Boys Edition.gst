@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d74c-5ac5-fbf4-56c3" name="Warhammer 40k: Emperor Edition" revision="29" battleScribeVersion="2.03" authorName="Cobrinion" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="d74c-5ac5-fbf4-56c3" name="Warhammer 40k: Emperor Edition" revision="30" battleScribeVersion="2.03" authorName="Cobrinion" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <publications>
-    <publication id="3ff9-2058-b559-545b" name="Emperor Edition Core Rules"/>
+    <publication id="3ff9-2058-b559-545b" name="Github" publisherUrl="Cobrinion/40kEmperor"/>
   </publications>
   <costTypes>
     <costType id="e7de-8dcf-403a-b76a" name="pts" defaultCostLimit="0" hidden="false"/>
@@ -2496,7 +2496,7 @@ Type: Haywire</description>
     </profile>
     <profile id="493f-7f11-6a34-df7f" name="Cataphractii Terminator Armour" hidden="false" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item">
       <characteristics>
-        <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Cataphractii Terminator Armour confers the Bulky (2) and Slow And Purposeful Special Rules. This pattern of Terminator armour also affords a 2+ save a 4+ Invulnurable Save and increases the models wounds by +1. A model with Cataphractii Terminator who also has an Iron Halo or a Sigil of Corruption may reroll invulnurable saves of 1 to represent the overlapping energy fields. </characteristic>
+        <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Cataphractii Terminator Armour confers the Bulky (2) and Slow And Purposeful Special Rules. This pattern of Terminator armour also affords a 2+ save a 4+ Invulnurable Save and increases the models wounds by +1. A model with Cataphractii Terminator who also has an Iron Halo or a Sigil of Corruption may reroll invulnurable saves of 1 to represent the overlapping energy fields.</characteristic>
       </characteristics>
     </profile>
     <profile id="625e-f664-dbef-3973" name="Close Combat Weapon" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
@@ -3566,6 +3566,32 @@ Jetbikes can move over all other models and terrain freely. However, if a moving
     <profile name="Digital Weapons" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="e8a3-9eb2-c92d-10e6">
       <characteristics>
         <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Digital Weapons provide +1 attack in close combat.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Grenadier Gauntlet" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="c0f9-dac5-43d7-4994">
+      <characteristics>
+        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">6</characteristic>
+        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 1, Blast</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Brute Shield" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="9b33-b933-744e-eb9f">
+      <characteristics>
+        <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">A brute shield confers a 5+ invulnerable save.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Slabshield" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="af99-5f4d-911a-f621">
+      <characteristics>
+        <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">If a model with a slabshield is in base contact with one or more models with a slabshield from the same unit, it adds +1 to its Armour Save. Furthermore, if a target (friend or foe) is partially obscured from the firer’s view by at least one model with a slabshield, it receives +1 to its cover save.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rippa Gun" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="8287-d35f-f458-c0fb">
+      <characteristics>
+        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
+        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">-</characteristic>
+        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 3</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
