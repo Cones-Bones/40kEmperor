@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8835-2049-fe6c-2642" name="Sol Alliance - Grey Knights " revision="8" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="8835-2049-fe6c-2642" name="Sol Alliance - Grey Knights " revision="9" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="48c8-31f9-ff3a-af17" name="Castellan Crowe" hidden="false" collective="false" import="true" targetId="6a2f-09e0-8270-3764" type="selectionEntry">
       <categoryLinks>
@@ -36,6 +36,11 @@
         <categoryLink targetId="ebc5-5615-35fb-bc91" id="dd2c-6087-57b4-d4dc" primary="true" name="Elites"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Purifier Squad" hidden="false" id="fe39-6ac0-de89-1577" type="selectionEntry" targetId="8053-75d5-6bfd-b909">
+      <categoryLinks>
+        <categoryLink targetId="ebc5-5615-35fb-bc91" id="3801-a22e-6f7a-f918" primary="true" name="Elites"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="6b04-c6d8-3dc1-5ff2" name="Preferred Enemy: Daemons " hidden="false">
@@ -64,23 +69,10 @@ If a model with this rule makes an attack against a mixed unit which has one or 
             <characteristic name="A" typeId="d535-b745-b613-a7ab">4</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/4++</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Fearless, Heroic Sacrifice, Master Swordsman, The Perfect Warrior, GREY KNIGHTS</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="d1db-191d-cee2-2f95" name="Master Swordsman" publicationId="3ff9-2058-b559-545b" page="63" hidden="false">
-          <description>Whenever Castellan Crow fights in a challenge, he uses both the Sword Strike and Blade Shield Stance.</description>
-        </rule>
-        <rule id="57c7-3558-4816-5ea5" name="The Perfect Warrior" hidden="false">
-          <description>Castellan Crowe must always issue and accept challenges when able. When in an assault, Castallan must pick either the Sword Strike or Blade Shield stance to fight in until the end of the Assault phase.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="d106-8cc9-d3be-01c0" name="Fearless" hidden="false" targetId="8220-efb5-2199-6d3d" type="rule"/>
-        <infoLink id="caaa-4dc6-baff-5087" name="Heroic Sacrifice" hidden="false" targetId="d2c4-96ef-0d18-5edc" type="rule"/>
-        <infoLink name="GREY KNIGHTS" id="7807-878e-1303-d0b0" hidden="false" type="rule" targetId="6158-067d-3fd1-b234"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="40af-d05f-2bbe-19fc" name="The Black Blade of Antwyr" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -120,14 +112,12 @@ If a model with this rule makes an attack against a mixed unit which has one or 
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b010-b703-d752-8b83" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ba8-79f1-8c1d-85c0" type="max"/>
           </constraints>
-          <rules>
-            <rule id="9b52-285f-1ff4-895d" name="Iron Halo" hidden="false">
-              <description>An Iron Halo gives the user a 4+ Invulnurable Save.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Iron Halo" id="1605-49ee-c947-504d" hidden="false" type="profile" targetId="9604-cc84-8bc0-8118"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="3c0e-b92c-6b07-5e64" name="Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -201,13 +191,10 @@ If a model with this rule makes an attack against a mixed unit which has one or 
             <characteristic name="A" typeId="d535-b745-b613-a7ab">1</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">GREY KNIGHTS, Deep Strike</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="GREY KNIGHTS" id="ba07-3206-090c-d87a" hidden="false" type="rule" targetId="6158-067d-3fd1-b234"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="25a2-3ec4-5d72-8340" name="Justicar" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -228,7 +215,7 @@ If a model with this rule makes an attack against a mixed unit which has one or 
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">9</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">GREY KNIGHTS, Deep Strike</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -358,11 +345,6 @@ If a model with this rule makes an attack against a mixed unit which has one or 
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e49-6ddb-d9b2-0d2b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3610-3af9-4307-6aae" type="min"/>
           </constraints>
-          <rules>
-            <rule id="a5e6-9951-735d-2ce7" name="Brotherhood of Psykers" hidden="false">
-              <description>A unit with this rule is considered to be a single psyker and gains the Sanctic psychic discipline. These units may choose to cast a Psychic power as described in the Santic Discipline rules.</description>
-            </rule>
-          </rules>
           <entryLinks>
             <entryLink id="a353-c20e-5901-f11a" name="Sanctus" hidden="false" collective="false" import="true" targetId="be72-9e20-115e-68d8" type="selectionEntryGroup"/>
           </entryLinks>
@@ -533,8 +515,6 @@ If a model with this rule makes an attack against a mixed unit which has one or 
     </selectionEntry>
     <selectionEntry id="322e-c8e4-062a-950d" name="Paladin Squad" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="5aad-309f-0144-9554" name="Inexorable" hidden="false" targetId="36fe-0ccf-9c80-7e80" type="rule"/>
-        <infoLink name="GREY KNIGHTS" id="c4ec-291f-23dc-2e9c" hidden="false" type="rule" targetId="6158-067d-3fd1-b234"/>
         <infoLink name="Frag Grenades" id="9cee-c9bf-250f-7896" hidden="false" type="profile" targetId="3b31-8ac4-2152-876b"/>
         <infoLink name="Krak Grenades" id="7a67-28ab-2490-2c71" hidden="false" type="profile" targetId="9af1-f354-beeb-0bfd"/>
         <infoLink name="Psyk-Out Grenade" id="08a5-ef29-5f7c-8e9d" hidden="false" type="profile" targetId="752f-7fe3-165d-f833"/>
@@ -595,7 +575,7 @@ If a model with this rule makes an attack against a mixed unit which has one or 
                     <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
                     <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">9</characteristic>
                     <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/5++</characteristic>
-                    <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                    <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Brotherhood of Psykers, GREY KNIGHTS, Inexorable, Deep Strike</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -622,7 +602,7 @@ If a model with this rule makes an attack against a mixed unit which has one or 
                     </selectionEntry>
                     <selectionEntry id="0970-1194-39a4-03f3" name="Nemesis Force Halberd" hidden="false" collective="false" import="true" type="upgrade">
                       <profiles>
-                        <profile id="038c-7efc-90d8-7ec0" name="Force Halberd" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+                        <profile id="038c-7efc-90d8-7ec0" name="Nemesis Force Halberd" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
                           <characteristics>
                             <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
                             <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">+1</characteristic>
@@ -637,7 +617,7 @@ If a model with this rule makes an attack against a mixed unit which has one or 
                     </selectionEntry>
                     <selectionEntry id="7ed9-ffbd-b677-f717" name="Nemesis Force Sword" hidden="false" collective="false" import="true" type="upgrade">
                       <profiles>
-                        <profile id="3076-afcd-aeff-80e2" name="Force Sword" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+                        <profile id="3076-afcd-aeff-80e2" name="Nemesis Force Sword" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
                           <characteristics>
                             <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
                             <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
@@ -652,7 +632,7 @@ If a model with this rule makes an attack against a mixed unit which has one or 
                     </selectionEntry>
                     <selectionEntry id="cd49-2a54-7f32-1fe7" name="Nemesis Twin Falchions" hidden="false" collective="false" import="true" type="upgrade">
                       <profiles>
-                        <profile id="a39d-5df5-471a-d824" name="Twin Falchions" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
+                        <profile id="a39d-5df5-471a-d824" name="Nemesis Twin Falchions" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
                           <characteristics>
                             <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
                             <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
@@ -840,33 +820,28 @@ If a model with this rule makes an attack against a mixed unit which has one or 
             <characteristic name="A" typeId="d535-b745-b613-a7ab">4</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/5++</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Force Shielding, GREY KNIGHTS</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="28dc-df98-fa23-eb19" name="Force Shielding" hidden="false">
-          <description>Models with Force Shielding have an Invulnurable Save of 5+</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink name="GREY KNIGHTS" id="4fe9-434f-b9f7-67cc" hidden="false" type="rule" targetId="6158-067d-3fd1-b234"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="0ea1-a365-f4f6-35fb" name="Personal Teleporter" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff6d-02f4-f4f0-1f51" type="max"/>
           </constraints>
-          <rules>
-            <rule id="58f5-d6a7-68ef-16eb" name="Personal Teleporter" hidden="false">
-              <description>Once per game a unit equipt with a Personal Teleporter may make a teleport shunt moves up to 30&quot; in the Movement phase. This move cannot end up on another unit or impassable terrain, but ignores intervening units, terrain etc. A unit cannot charge in the same turn that it makes a teleport shunt. 
-
-In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monsterous Creature) rule.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="30"/>
           </costs>
+          <profiles>
+            <profile name="Personal Teleporter" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="d4a5-fa70-4436-7ef0">
+              <characteristics>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Once per game a unit equipt with a Personal Teleporter may make a teleport shunt moves up to 30&quot; in the Movement phase. This move cannot end up on another unit or impassable terrain, but ignores intervening units, terrain etc. A unit cannot charge in the same turn that it makes a teleport shunt.
+
+
+In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monsterous Creature) rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry id="9f3a-a3e2-7dd1-23f8" name="Psyker" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1042,14 +1017,10 @@ In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monst
             <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/5++</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Inexorable, GREY KNIGHTS</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="e3fb-ff63-40e9-2522" name="Inexorable" hidden="false" targetId="36fe-0ccf-9c80-7e80" type="rule"/>
-        <infoLink name="GREY KNIGHTS" id="5623-1f32-67c5-0210" hidden="false" type="rule" targetId="6158-067d-3fd1-b234"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="986b-293b-f0e2-c7a1" name="Psyker" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1082,14 +1053,12 @@ In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monst
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="705f-0b95-4274-afbf" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64bc-4a78-b86a-de44" type="max"/>
           </constraints>
-          <rules>
-            <rule id="59d5-ec31-0cc2-9f36" name="Iron Halo" hidden="false">
-              <description>An Iron Halo gives the user a 4+ Invulnurable Save.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Iron Halo" id="e572-a1e8-65a6-7605" hidden="false" type="profile" targetId="9604-cc84-8bc0-8118"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="b8a1-fe53-21c1-1e3c" name="Aegis Terminator Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1110,7 +1079,6 @@ In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monst
         <selectionEntry id="8b3a-26b9-c799-3bad" name="Warlord" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="034e-92ca-3207-ae7d" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6ec-d07b-92e9-7b9a" type="min"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
@@ -1190,7 +1158,15 @@ In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monst
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="9508-4526-ba42-9e44" name="Special Issue Wargear" hidden="false" collective="false" import="true" targetId="7dbc-0901-7e42-c7d5" type="selectionEntryGroup"/>
-        <entryLink id="f24b-1ca6-c358-edb3" name="Relics of Titan" hidden="false" collective="false" import="true" targetId="3d76-7534-500a-5165" type="selectionEntryGroup"/>
+        <entryLink id="f24b-1ca6-c358-edb3" name="Relics of Titan" hidden="true" collective="false" import="true" targetId="3d76-7534-500a-5165" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="8b3a-26b9-c799-3bad" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="96f6-dba6-c193-5ed2" name="Melee Weapon: " hidden="false" collective="false" import="true" targetId="f14b-62d3-3256-8671" type="selectionEntryGroup">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2e2-5a0d-3880-7433" type="max"/>
@@ -1215,7 +1191,7 @@ In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monst
             <characteristic name="Side" typeId="678c-ae54-8f51-b1df">14</characteristic>
             <characteristic name="Rear" typeId="ba30-3821-8b66-5ba0">14</characteristic>
             <characteristic name="HP" typeId="5e13-b98b-8be5-0dd9">5</characteristic>
-            <characteristic name="Type" typeId="bea4-6273-1ca3-52cf">Vehicle (Tank, Transport)</characteristic>
+            <characteristic name="Type" typeId="bea4-6273-1ca3-52cf">Vehicle (Tank, Transport), Assault Vehicle, Power of the Machine Spirit, Psychic Pilot, GREY KNIGHTS</characteristic>
             <characteristic name="Movement" typeId="8f2e-a02c-1f7b-55d4">12</characteristic>
           </characteristics>
         </profile>
@@ -1227,18 +1203,6 @@ In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monst
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="d7a4-cc5a-c782-8d3b" name="Psychic Pilot" page="0" hidden="false">
-          <description>A vehicle with this special rule is a Psyker. The vehicle is considered to have a Leadership characteristic of 10, should this be needed in order to resolve any psychic power.</description>
-        </rule>
-        <rule id="876b-9284-0162-9a3d" name="Power of the Machine-Spirit" hidden="false">
-          <description>A Vehicle with this special rule may attack different targets with each Ranged weapon it is permitted to fire during any Shooting Attack.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="84c1-a386-b52a-b53f" name="Assault Vehicle" hidden="false" targetId="9ad7-6964-df60-92b6" type="rule"/>
-        <infoLink name="GREY KNIGHTS" id="3050-0ef3-a9ef-4f2d" hidden="false" type="rule" targetId="6158-067d-3fd1-b234"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="96b8-2308-437b-1030" name="Fortitude" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1356,7 +1320,6 @@ In addition, a Personal Teleporter gives the Nemesis Dreadknight the Jump (Monst
           <selectionEntries>
             <selectionEntry id="af0b-ecbe-fea5-24ce" name="Storm-Bolter" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="4269-8a0e-19eb-4018" name="Storm Bolter" hidden="false" targetId="a144-5691-6fd0-a068" type="profile"/>
                 <infoLink name="Storm Bolter" id="625e-3221-8b48-3de9" hidden="false" type="profile" targetId="a144-5691-6fd0-a068"/>
               </infoLinks>
               <costs>
@@ -1548,13 +1511,10 @@ If the Vortimer Pattern Landraider is destroyed, the transported vehicle or Drea
                 <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
                 <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">7</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
-                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 2/Heavy 4, Rending</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 2/Heavy 4, Rending (6)</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="5db9-c865-4f48-2c1a" name="Rending" hidden="false" targetId="daf9-7786-40aa-8807" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -1578,16 +1538,356 @@ If the Vortimer Pattern Landraider is destroyed, the transported vehicle or Drea
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff31-031a-8765-1b3a" type="max"/>
       </constraints>
-      <rules>
-        <rule id="14b7-2435-6789-74c6" name="Psybolt Ammunition" hidden="false">
-          <description>Silver tipped, psychically charged ammunition made specifically to destroy daemons. Once fired, these bolts glow with a blue light, striking with significantly greater force than an orginary bolter round. 
-
-A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psybolt Ammunition gains +1 to it&apos;s Strength value.</description>
-        </rule>
-      </rules>
       <costs>
         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
       </costs>
+      <profiles>
+        <profile name="Psybolt Ammunition" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="5973-517e-be90-d2fb">
+          <characteristics>
+            <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Silver tipped, psychically charged ammunition made specifically to destroy daemons. Once fired, these bolts glow with a blue light, striking with significantly greater force than an orginary bolter round.
+
+
+A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psybolt Ammunition gains +1 to it&apos;s Strength value.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Purifier Squad" hidden="false" id="8053-75d5-6bfd-b909">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Weapons" hidden="false" id="a070-375b-5f83-8872">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1f2-fc4b-2a36-a5c6"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="15bb-82cc-31e4-8d75"/>
+          </constraints>
+          <profiles>
+            <profile name="Purifier" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="ac43-1f6c-9944-3b32">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry</characteristic>
+                <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">7&quot;</characteristic>
+                <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+                <characteristic name="S" typeId="23ae-6026-aebd-abc3">4</characteristic>
+                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">4</characteristic>
+                <characteristic name="W" typeId="a763-cbc8-2080-a4fb">1</characteristic>
+                <characteristic name="I" typeId="ea41-893b-3f82-5482">4</characteristic>
+                <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
+                <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">9</characteristic>
+                <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">GREY KNIGHTS,  Purifying Flame</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Storm Bolter" id="53d1-486a-d068-acd8" hidden="false" type="profile" targetId="a144-5691-6fd0-a068"/>
+            <infoLink name="Frag Grenades" id="2b3f-8acf-3722-3760" hidden="false" type="profile" targetId="3b31-8ac4-2152-876b"/>
+            <infoLink name="Krak Grenades" id="5523-fc77-9454-20f6" hidden="false" type="profile" targetId="9af1-f354-beeb-0bfd"/>
+            <infoLink name="Psyk-Out Grenade" id="fce7-f8a6-6dd9-8a9f" hidden="false" type="profile" targetId="752f-7fe3-165d-f833"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Brotherhood of Psykers" hidden="false" id="1024-ceb1-6c3c-71d4" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85a5-4e13-2ced-cd17" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="60bf-2787-7e21-c77d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Sanctus" hidden="false" id="07d5-3d41-9a30-384d" collective="false" targetId="be72-9e20-115e-68d8" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Knight of the Flame" hidden="false" id="058e-9691-6c01-2ad4" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c48d-b05c-01ee-2fba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce88-edc9-8210-846a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Knight of the Flame" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="f875-66ce-9f6d-3340">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Character)</characteristic>
+                <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">7&quot;</characteristic>
+                <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+                <characteristic name="S" typeId="23ae-6026-aebd-abc3">4</characteristic>
+                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">4</characteristic>
+                <characteristic name="W" typeId="a763-cbc8-2080-a4fb">2</characteristic>
+                <characteristic name="I" typeId="ea41-893b-3f82-5482">4</characteristic>
+                <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
+                <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">9</characteristic>
+                <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">GREY KNIGHTS, Purifying Flame</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="3e50-30c6-2427-4a8d" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b2e-6ba9-126d-f1b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="187c-469b-0ecc-ea03" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Storm Bolter" id="5a0a-ac23-6ec6-dbb0" hidden="false" targetId="a144-5691-6fd0-a068" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Melee Weapon" id="c51d-8315-b82c-69de" hidden="false" collective="false" import="true" defaultSelectionEntryId="9e75-ffb7-3b2b-acc1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8af9-a855-fcc4-6e9f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04b0-7bd9-9b62-dede" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Daemon Hammer" hidden="false" id="5ab6-a674-6fb8-ad92" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7bc3-3883-4d86-9eed" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Daemon Hammer" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="76e3-293f-e192-333b">
+                      <characteristics>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">x2</characteristic>
+                        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
+                        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Sanctic Force, Concussive, Daemonbane, Unwieldy, Specialist Weapon, Brutal (2)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Aegis Force Halberd" hidden="false" id="fb75-bae1-7e9e-34b1" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a92-f710-1e1d-04d2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Force Halberd" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="3e52-7964-8c4f-ec89">
+                      <characteristics>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">+1</characteristic>
+                        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+                        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Reach (1) Sanctic Force, Daemonbane, Two-Handed</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Aegis Force Sword" hidden="false" id="9e75-ffb7-3b2b-acc1" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3ed-c2ef-b1fb-d77e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Saturnine-Pattern Force Sword" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="57bf-9147-bbe2-6867">
+                      <characteristics>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+                        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Rending (6+), Sanctic Force, Daemonbane</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Warding Stave" hidden="false" id="456d-c4c8-b982-a3a4" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f62f-e72b-3581-cc7e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Warding Stave" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="6fba-9dc3-85bf-ae5c">
+                      <characteristics>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">+2</characteristic>
+                        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Sanctic Force, Concussive, Daemonbane, Ward</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="3"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Aegis Twin Falchions" hidden="false" id="4d7b-89ce-b1be-03b4" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86a1-83bf-f989-5e0d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Twin Falchions" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="26a1-24af-bd4a-6c60">
+                      <characteristics>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+                        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Sanctic Force, Daemonbane, Specialist Weapon</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Special Issue Wargear" hidden="false" id="3f95-aa0b-2f80-9f7a" collective="false" targetId="7dbc-0901-7e42-c7d5" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="30"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Psybolt Ammunition" hidden="false" id="b21c-4c39-93ef-49e3" collective="false" targetId="b8ea-e3f0-6781-37f8" type="selectionEntry"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Two in five may take: " id="7be0-cdb3-a10b-7842" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" value="2" field="7ba8-9b51-64e7-14f8">
+              <repeats>
+                <repeat value="5" repeats="1" field="selections" scope="8053-75d5-6bfd-b909" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="7ba8-9b51-64e7-14f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incinerator" hidden="false" id="d067-0e8d-4ca2-6f95" collective="false">
+              <profiles>
+                <profile name="Incinerator" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="9576-1452-75e7-3fd6" publicationId="3ff9-2058-b559-545b" page="89">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">Template</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">6</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 1, Soul Blaze</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Psilencer" hidden="false" id="426c-cc96-6c60-3db6" collective="false">
+              <profiles>
+                <profile name="Psilencer" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="bc29-39d8-a09d-1dd3" publicationId="3ff9-2058-b559-545b" page="89">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">-</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 6, Sanctic Force</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Psycannon" hidden="false" id="dce9-5850-a868-2db3" collective="false">
+              <profiles>
+                <profile name="Psycannon" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="8bcd-ca56-39e3-7ea7" publicationId="3ff9-2058-b559-545b" page="89">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">7</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Salvo 2/4, Rending (6+)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Purifier with:" id="a91d-1ff1-4de1-5103" hidden="false" collective="false" import="true" defaultSelectionEntryId="9b63-6d0c-fcf8-504d">
+          <constraints>
+            <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="d0a0-1003-f0df-87bc" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="022b-e38c-b86a-9f29" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Nemesis Daemon Hammer" hidden="false" id="5f7b-5231-dd61-85cd" collective="false">
+              <profiles>
+                <profile name="Nemesis Daemon Hammer" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="50b2-dda8-72e6-972a">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">x2</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee,  Sanctic Force, Concussive, Daemonbane, Unwieldy, Specialist Weapon, Brutal (2)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Nemesis Force Halberd" hidden="false" id="a605-7cc4-76bd-0156" collective="false">
+              <profiles>
+                <profile name="Nemesis Force Halberd" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="ac5c-266b-9bd3-9a41">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">+1</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Sanctic Force, Daemonbane, Two-Handed</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Nemesis Twin Falchions" hidden="false" id="e02e-702b-99cf-62c7" collective="false">
+              <profiles>
+                <profile name="Nemesis Twin Falchions" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="d0fb-2e47-de24-dc85">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Sanctic Force, Daemonbane, Specialist Weapon</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="28"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Warding Stave" hidden="false" id="cb4c-c582-db84-2eb9" collective="false">
+              <profiles>
+                <profile name="Warding Stave" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="07bb-5291-1421-155b">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">+2</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Sanctic Force, Concussive, Daemonbane, Ward</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="28"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Nemesis Force Sword" hidden="false" id="9b63-6d0c-fcf8-504d" collective="false">
+              <profiles>
+                <profile name="Nemesis Force Sword" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="a877-abfd-925a-acbe">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">3</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Sanctic Force, Daemonbane, Rending (6)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -1598,7 +1898,7 @@ A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psyb
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ed-f4f7-791f-b899" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="36e5-653d-cbfd-dbca" name="Digital Weapons" hidden="false" targetId="d77f-7c72-6661-6bfa" type="rule"/>
+            <infoLink name="Digital Weapons" id="4c9d-9eec-3bc3-f485" hidden="false" type="profile" targetId="e8a3-9eb2-c92d-10e6"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
@@ -1630,9 +1930,6 @@ A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psyb
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="876e-c88c-37ef-0783" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="6410-2a57-7200-3c1c" name="Master-Crafted" hidden="false" targetId="1814-e927-17ca-b6d5" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
           </costs>
@@ -1655,9 +1952,6 @@ A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psyb
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="fdab-9ca0-5052-a64b" name="Soul Blaze" hidden="false" targetId="e4f5-738e-169e-6dc5" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
           </costs>
@@ -1684,13 +1978,10 @@ A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psyb
                 <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
                 <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">7</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
-                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Salvo 2/4, Rending</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Salvo 2/4, Rending (6)</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="835e-2897-46e3-b447" name="Rending" hidden="false" targetId="daf9-7786-40aa-8807" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
           </costs>
@@ -1747,14 +2038,6 @@ A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psyb
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="612c-c732-d080-0af7" name="It Will Not Die" hidden="false" targetId="42b6-2a61-9a88-0c0f" type="rule"/>
-            <infoLink id="6ebc-c5a8-3512-5f6c" name="Feel No Pain" hidden="false" targetId="f3a2-c2b0-6b0e-1653" type="rule">
-              <modifiers>
-                <modifier type="set" field="name" value="Feel No Pain (5+)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
           <selectionEntries>
             <selectionEntry id="a8ea-ae55-81be-bfcb" name="Read Lore entry:" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1803,13 +2086,10 @@ A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psyb
                 <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">36&quot;</characteristic>
                 <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
-                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 3, Master-crafted, Precision Shot</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 3, Master-Crafted, Precision Shot</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="c9c1-2741-1a32-7086" name="Master-Crafted" hidden="false" targetId="1814-e927-17ca-b6d5" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
           </costs>
@@ -1830,12 +2110,6 @@ A Storm Bolter, Hurricane Bolter, Heavy Bolter or Assault Cannon armed with Psyb
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule id="e2a1-c31b-c57c-674d" name="Soul Imprint" hidden="false">
-              <description>A character wielding the Soul Glaive re-rolls failed psychic tests when attempting to manifest Force.
-If this attempt is succesfully manifested on this character, or his unit, then the Soul Glaive rerolls all failed to hit, to wound and armour penetration-rolls while the Blessing is in effect.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
           </costs>
@@ -1855,6 +2129,31 @@ If this attempt is succesfully manifested on this character, or his unit, then t
 Purity of Spirit
 The Aegis
 Preferred Enemy: Daemons</description>
+    </rule>
+    <rule name="Soul Imprint" id="bc89-d3d8-3a43-35e5" hidden="false">
+      <description>A character wielding the Soul Glaive re-rolls failed psychic tests when attempting to manifest Force.
+If this attempt is succesfully manifested on this character, or his unit, then the Soul Glaive rerolls all failed to hit, to wound and armour penetration-rolls while the Blessing is in effect.</description>
+    </rule>
+    <rule name="Master Swordsman" id="f7cf-e67d-b8b6-7d5b" hidden="false" publicationId="3ff9-2058-b559-545b" page="63">
+      <description>Whenever Castellan Crow fights in a challenge, he uses both the Sword Strike and Blade Shield Stance.</description>
+    </rule>
+    <rule name="The Perfect Warrior" id="8fcb-960b-8060-eb13" hidden="false">
+      <description>Castellan Crowe must always issue and accept challenges when able. When in an assault, Castallan must pick either the Sword Strike or Blade Shield stance to fight in until the end of the Assault phase.</description>
+    </rule>
+    <rule name="Power of the Machine-Spirit" id="c6e7-c642-a94f-39fd" hidden="false">
+      <description>A Vehicle with this special rule may attack different targets with each Ranged weapon it is permitted to fire during any Shooting Attack.</description>
+    </rule>
+    <rule name="Psychic Pilot" id="94a3-b676-040c-9bee" hidden="false" page="0">
+      <description>A vehicle with this special rule is a Psyker. The vehicle is considered to have a Leadership characteristic of 10, should this be needed in order to resolve any psychic power.</description>
+    </rule>
+    <rule name="Force Shielding" id="39c6-4bbe-7a66-46f6" hidden="false">
+      <description>Models with Force Shielding have an Invulnurable Save of 5+</description>
+    </rule>
+    <rule name="Brotherhood of Psykers" id="b014-94f5-3313-9448" hidden="false">
+      <description>A unit with this rule is considered to be a single psyker and gains the Sanctic psychic discipline. These units may choose to cast a Psychic power as described in the Santic Discipline rules.</description>
+    </rule>
+    <rule name="Purifying Flame" id="f920-c68a-30fa-b509" hidden="false">
+      <description>All close combat attacks made by Purifiers have the Soul Blaze special rule.</description>
     </rule>
   </sharedRules>
   <infoLinks>

@@ -218,11 +218,6 @@
         <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0c1-5d0d-4a81-39b5" type="max"/>
         <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="350d-8135-5033-1ad6" type="min"/>
       </constraints>
-      <rules>
-        <rule id="1351-57a1-2ae1-962d" name="Psychic Discipline: Sanctus" hidden="false">
-          <description>A Psyker with this discipline gains all the listed powers, weapons and other special rules, as well as the Aetheric Lightning Psychic weapon.</description>
-        </rule>
-      </rules>
       <selectionEntries>
         <selectionEntry id="43d0-ebf2-1f0e-f1a2" name="Cleansing Flame" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -323,9 +318,6 @@ containing the model that failed its test. If the Psyker survives Perils of the 
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="d480-37a9-c5c6-8cdb" name="Psychic Focus" hidden="false" targetId="6825-f0c9-1ea7-42a1" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -750,10 +742,6 @@ containing the model that failed its test. If the Psyker survives Perils of the 
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="cea8-c851-6201-f4de" name="Precision Shots" hidden="false" targetId="f973-ed50-2ef2-1ffd" type="rule"/>
-            <infoLink id="2f5d-58e0-302c-3196" name="Precision Strikes" hidden="false" targetId="3e4f-328e-6455-4cf9" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -773,11 +761,6 @@ containing the model that failed its test. If the Psyker survives Perils of the 
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="d33e-6aea-20f0-35b9" name="Psychic Focus" hidden="false" targetId="6825-f0c9-1ea7-42a1" type="rule"/>
-            <infoLink id="301a-9526-7b96-ce03" name="Guided Fire" hidden="false" targetId="9855-a17a-2eee-337f" type="rule"/>
-            <infoLink id="76ed-65c4-31a7-2e9f" name="Sniper" hidden="false" targetId="193d-a5ab-2a72-7772" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -830,10 +813,6 @@ containing the model that failed its test. If the Psyker survives Perils of the 
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="150f-f760-238a-350a" name="Psychic Focus" hidden="false" targetId="6825-f0c9-1ea7-42a1" type="rule"/>
-            <infoLink id="052b-7e47-b515-74ad" name="Sunder" hidden="false" targetId="69cb-9416-7d88-15db" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -2340,7 +2319,11 @@ If a Hit! is rolled, the firing player places the marker so that it touches any 
 Once all of the markers are in place, add up the number of hits and roll To Wound for these hits. To determine wound allocation and cover saves, always assume the shot is coming from the centre of the first Blast marker that was placed in the Multiple Barrage.</description>
     </rule>
     <rule name="Psyker" id="efe6-c91d-9e37-1c3a" hidden="false">
-      <description>Common to all forms of psychic ability is the possibility of the Warp’s power rebelling and wreaking havoc on the Psyker and their allies. This is represented by the Perils of the Warp special rule. Most Psychic Powers and Weapons dictate under what conditions a Psyker must suffer Perils of the Warp, but in most cases this will be as the result of a failed Leadership test while using a Psychic Power or attack.
+      <description>
+
+
+
+Common to all forms of psychic ability is the possibility of the Warp’s power rebelling and wreaking havoc on the Psyker and their allies. This is represented by the Perils of the Warp special rule. Most Psychic Powers and Weapons dictate under what conditions a Psyker must suffer Perils of the Warp, but in most cases this will be as the result of a failed Leadership test while using a Psychic Power or attack.
 
 
 Whenever a Psyker or other model/unit suffers Perils of the Warp, apply the rule below:

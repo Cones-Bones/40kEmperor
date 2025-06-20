@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="a773-03a1-5b4e-2bc0" name="Grunt Squad" hidden="false" collective="false" import="true" targetId="f600-c88f-4166-4d69" type="selectionEntry">
       <categoryLinks>
@@ -64,15 +64,10 @@
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">1</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">5</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">6+</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Grunt Fodder</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule id="e481-f517-5dba-52f4" name="Grunt Fodder" hidden="false">
-              <description>When a Grunt&apos;s Squad Leader is destroyed, this unit must immediatly make a leadership check. On a roll of double 1s, D3 Grunts immediatly attempt to charge D6 inches towards the closest enemy unit. These models then explode with the plasma grenade weapon profile, regardless of if they hit their target or not.</description>
-            </rule>
-          </rules>
           <selectionEntryGroups>
             <selectionEntryGroup id="7754-375d-d361-79ea" name="Weapon Selection:" hidden="false" collective="false" import="true" defaultSelectionEntryId="2fd0-13f3-3fd3-9a8d">
               <constraints>
@@ -102,11 +97,6 @@
                       </characteristics>
                     </profile>
                   </profiles>
-                  <infoLinks>
-                    <infoLink id="49ed-0e9f-57bb-f98a" name="One Use Only/One Shot Only" hidden="false" targetId="3243-b9fe-722d-4805" type="rule"/>
-                    <infoLink id="d11b-5fd9-690d-0439" name="Haywire" hidden="false" targetId="ba9c-e447-f4d9-38dd" type="rule"/>
-                    <infoLink id="1359-0824-4fa8-d67d" name="Covenant Plasma" hidden="false" targetId="33ee-bac7-9e15-e729" type="rule"/>
-                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
                   </costs>
@@ -125,14 +115,6 @@
                       </characteristics>
                     </profile>
                   </profiles>
-                  <rules>
-                    <rule id="4b49-aa07-50d6-4668" name="Tracking Needles" hidden="false">
-                      <description>When targeting a model within half range of the needler, add +1 to hit.</description>
-                    </rule>
-                    <rule id="fff5-a755-7078-88e2" name="Combined Explosion" hidden="false">
-                      <description>This weapon gains the Instant Death special rule on a To Wound roll of 6+</description>
-                    </rule>
-                  </rules>
                   <costs>
                     <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
                   </costs>
@@ -185,17 +167,10 @@
                     <characteristic name="A" typeId="d535-b745-b613-a7ab">1</characteristic>
                     <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">7</characteristic>
                     <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">4+</characteristic>
-                    <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                    <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Energy Shielding</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="51d3-1466-eb06-cbd1" name="Energy Shielding" hidden="false" targetId="62ee-6610-ca13-96b4" type="rule">
-                  <modifiers>
-                    <modifier type="set" field="name" value="Energy Shielding (1)"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
               <selectionEntries>
                 <selectionEntry id="6e3f-2bac-1ec8-6a54" name="Upgrade to Major" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
@@ -232,11 +207,6 @@
                           </characteristics>
                         </profile>
                       </profiles>
-                      <rules>
-                        <rule id="8502-cb15-a0ab-4074" name="Covenant Plasma" hidden="false">
-                          <description>Negate the effects of any &quot;Shielding&quot; based special rules that are the target of this weapon.</description>
-                        </rule>
-                      </rules>
                       <selectionEntries>
                         <selectionEntry id="6335-663a-048d-9fda" name="Duel Wield" hidden="false" collective="false" import="true" type="upgrade">
                           <constraints>
@@ -268,14 +238,6 @@
                           </characteristics>
                         </profile>
                       </profiles>
-                      <rules>
-                        <rule id="0420-9293-8ba1-2f1b" name="Tracking Needles" hidden="false">
-                          <description>When targeting a model within half range of the needler, add +1 to hit.</description>
-                        </rule>
-                        <rule id="843a-71e4-477e-3157" name="Combined Explosion" hidden="false">
-                          <description>This weapon gains the Instant Death special rule on a To Wound roll of 6+</description>
-                        </rule>
-                      </rules>
                       <selectionEntries>
                         <selectionEntry id="4d99-5722-3020-ca8c" name="Duel Wield" hidden="false" collective="false" import="true" type="upgrade">
                           <constraints>
@@ -621,28 +583,10 @@
       <profiles>
         <profile id="550f-91f2-c4a3-593a" name="Hunter Shield" hidden="false" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item">
           <characteristics>
-            <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">A Hunter&apos;s Shield confers a 4+ Invulnurable save. In additon a Hunter may re-roll failed saving throws.</characteristic>
+            <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">A Hunter&apos;s Shield confers a 4+ Invulnurable save.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="fa05-79c0-418b-0379" name="Bond Brothers" hidden="false">
-          <description>If a Hunter from a Hunter pack is destroyed, the remaining Hunter gains Hatred for the unit which destroyed the first Hunter. In addition, the remaining Hunter gains Rage (2) and Rampage (2)</description>
-        </rule>
-        <rule id="b559-5178-25aa-2159" name="Hunter Pack" hidden="false">
-          <description>No model or unit may not join a Hunter Pack.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="66a2-1b7e-ee1d-3616" name="Smash" hidden="false" targetId="5f6f-bb49-354d-b1cd" type="rule"/>
-        <infoLink id="60b1-9226-c129-3166" name="Fearless" hidden="false" targetId="8220-efb5-2199-6d3d" type="rule"/>
-        <infoLink id="2f5e-22cc-f255-7f16" name="Fear" hidden="false" targetId="bbca-34a4-2d3d-8d2a" type="rule">
-          <modifiers>
-            <modifier type="set" field="name" value="Fear (1)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="f6e8-0eaa-e3fc-96ac" name="Relentless" hidden="false" targetId="37e2-a92b-40b4-d7cc" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="fc36-5511-8916-7b1c" name="Hunter" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -657,13 +601,13 @@
                 <characteristic name="WS" typeId="9660-0df5-9c5d-3604">3</characteristic>
                 <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
                 <characteristic name="S" typeId="23ae-6026-aebd-abc3">8</characteristic>
-                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">8</characteristic>
+                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">7</characteristic>
                 <characteristic name="W" typeId="a763-cbc8-2080-a4fb">4</characteristic>
-                <characteristic name="I" typeId="ea41-893b-3f82-5482">2</characteristic>
+                <characteristic name="I" typeId="ea41-893b-3f82-5482">1</characteristic>
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">1</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Bulky (4), Bond Brothers, Fear (1), Fearless, Hunter Pack, Relentless, Smash</characteristic>
               </characteristics>
             </profile>
             <profile id="fac7-d098-fc26-527f" name="Fuel Rod Cannon (Stream)" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
@@ -679,36 +623,17 @@
                 <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">18&quot;</characteristic>
                 <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">8</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
-                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 1,  Armourbane, Brutal (2), Small Blast</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 1, Armourbane, Small Blast</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Mgalekgolo Armour" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="9abf-0e67-9339-afdf">
+              <characteristics>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">The armour of a Hunter confers a 2+ save. However it carries with it a glaring weakpoint. If a Hunter is wounded by a shooting attack being fired by a model to it&apos;s rear, the Hunter may not take invulnurable saves, and it&apos;s regular armour save is reduced to 5+</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule id="1831-6a3b-7595-d47d" name="Mgalekgolo Armour" hidden="false">
-              <description>The armour of a Hunter confers a 2+ save. However it carries with it a glaring weakpoint. If a Hunter is wounded by a shooting attack being fired by a model to it&apos;s rear, the Hunter may not take invulnurable saves, and it&apos;s regular armour save is reduced to 5+</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="37c4-8761-75e7-0e5f" name="Armourbane" hidden="false" targetId="6ba0-fe52-d3bc-761a" type="rule"/>
-            <infoLink id="189c-2b63-5b38-b1ee" name="Brutal" hidden="false" targetId="ff5f-10a3-5b90-d3b6" type="rule"/>
-            <infoLink id="ff88-a6da-bd45-3a4a" name="Bulky" hidden="false" targetId="65d1-8086-fb69-9579" type="rule">
-              <modifiers>
-                <modifier type="set" field="name" value="Bulky (3)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
           <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="60"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a9b9-e3ab-9e80-a040" name="Show Bond Brother special rules" hidden="false" collective="false" import="true" type="upgrade">
-          <infoLinks>
-            <infoLink id="0bbe-b809-00ab-311c" name="Rage" hidden="false" targetId="8c0c-8856-f1ab-923d" type="rule"/>
-            <infoLink id="6b90-8ebd-bdb7-fdf6" name="Rampage" hidden="false" targetId="6976-3785-3ce1-5043" type="rule"/>
-            <infoLink id="1a26-b63f-b9e5-b3d0" name="Hatred" hidden="false" targetId="a6b0-c95c-c78f-b0ab" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="100"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1106,6 +1031,21 @@ Energy Shielding regenerates by 1 at the start of each battleround to it&apos;s 
     </rule>
     <rule id="d010-195e-920c-a640" name="Honour Before All Else" hidden="false">
       <description>An Elite may never refuse a challenge. In additon, any unit with an Elite in it always rolls leadership without modifiers for the purpose of morale checks.</description>
+    </rule>
+    <rule name="Grunt Fodder" id="4fcd-c0af-1d5e-a146" hidden="false">
+      <description>When a Grunt&apos;s Squad Leader is destroyed, this unit must immediatly make a leadership check. On a roll of double 1s, D3 Grunts immediatly attempt to charge D6 inches towards the closest enemy unit. These models then explode with the plasma grenade weapon profile, regardless of if they hit their target or not.</description>
+    </rule>
+    <rule name="Combined Explosion" id="f27a-4b30-bdbf-d247" hidden="false">
+      <description>This weapon gains the Instant Death special rule on a To Wound roll of 6+</description>
+    </rule>
+    <rule name="Tracking Needles" id="b220-402d-837e-fb9e" hidden="false">
+      <description>When targeting a model within half range of the needler, add +1 to hit.</description>
+    </rule>
+    <rule name="Bond Brothers" id="5294-6290-ace2-e98b" hidden="false">
+      <description>If a Hunter from a Hunter pack is destroyed, the remaining Hunter gains Hatred for the unit which destroyed the first Hunter. In addition, the remaining Hunter gains Rage (2) and Rampage (2)</description>
+    </rule>
+    <rule name="Hunter Pack" id="7d8b-d7be-18fd-e805" hidden="false">
+      <description>No model or unit may join a Hunter Pack.</description>
     </rule>
   </sharedRules>
 </catalogue>

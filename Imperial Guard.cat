@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="32f2-0953-3a19-b2e6" name="Imperial Guard" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="32f2-0953-3a19-b2e6" name="Imperial Guard" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <forceEntries>
     <forceEntry id="fe0e-3c3e-b918-f97e" name="Imperial Guard Battalion" hidden="false">
       <categoryLinks>
@@ -138,6 +138,16 @@
         <categoryLink targetId="ebc5-5615-35fb-bc91" id="085e-0b8e-ea19-e719" primary="true" name="Elites"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Rogal Dorn Squadron" hidden="false" id="8780-82b8-cc6c-ca7b" type="selectionEntry" targetId="80e5-73d3-e862-abb6">
+      <categoryLinks>
+        <categoryLink targetId="2b42-3a90-e878-d0c5" id="409b-57b4-5d1b-232c" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Primaris Psyker" hidden="false" id="c041-8f5a-399f-fc38" type="selectionEntry" targetId="7c29-dbf9-b7f0-05a4">
+      <categoryLinks>
+        <categoryLink targetId="6375-3e5f-be64-925e" id="19c4-9ed9-5477-264f" primary="true" name="HQ"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a246-1662-efd4-bc2f" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -163,6 +173,21 @@ Any unit with the Death Korps of Krieg special rule that is Falling Back but has
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Catachan Jungle Fighters" hidden="false" id="b2af-1e1f-e5b8-7d93">
+              <rules>
+                <rule name="Jungle Predators" id="caa4-3352-b828-7e17" hidden="false">
+                  <description>Raised on the death world of Catachan, these warriors are forged in an environment where every plant, beast, and breath of air is lethal. 
+
+Units with this rule treat Difficult Terrain as Open Ground.
+
+
+Units with this rule may re-roll To Wound rolls of 1 in the first round of any assault. When fighting against models with the Monstrous Creature or Beast unit types they may re-roll wounds for the duration of the combat.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2715-5aae-0f53-c649" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -197,6 +222,17 @@ All Infantry units in this detachment increase their Ballistic Skill by +1 (To a
               <rules>
                 <rule id="66fd-2ab5-3c7a-90be" name="Sharpshooters" hidden="false">
                   <description>&quot;Models from this detachment may re-roll To Hit rolls of 1 when firing las weapons such as lasguns or lascannons. In addition, Cadian Infantry units may re-roll failed Morale and Pinning tests while within 6” of another Cadian unit.&quot;</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Harkoni Warhawks" hidden="false" id="8601-9cd4-1fc3-1132">
+              <rules>
+                <rule name="Skyborn Precision" id="f511-ea4a-0415-5310" hidden="false">
+                  <description>The Harakoni Warhawks are masters of aerial assault and grav-chute warfare. Trained to operate in tight urban environments and vertical kill-zones, their soldiers are drilled to deploy from low-orbit at a moment’s notice. 
+
+Infantry and Veteran Squads in this Detachment gain the Deep Strike special rule.
+
+In addition, units from this Detachment that arrive via Deep Strike may re-roll the scatter dice when deploying, and may re-roll To Hit rolls of 1 during the Shooting phase of the turn they arrive from Deep Strike.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -830,6 +866,10 @@ Terminator armour confers a 2+ Armour save.</characteristic>
       <costs>
         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="75"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="f961-bca0-323f-a6d3" type="selectionEntryGroup" targetId="6a34-f5ca-93df-d358"/>
+        <entryLink import="true" name="Heirlooms of War" hidden="true" id="f313-d009-ab50-41f8" type="selectionEntryGroup" targetId="b9a6-5fdf-00e4-c7ba"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="e86c-dd5c-6160-3241" name="Infantry Squad" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
@@ -944,6 +984,18 @@ Terminator armour confers a 2+ Armour save.</characteristic>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entire Squad may take Bayonets" hidden="false" id="e6cb-149a-80d0-0e71">
+              <modifiers>
+                <modifier type="increment" value="1" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="e86c-dd5c-6160-3241" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Bayonet" id="c6dc-8b54-469a-f543" hidden="false" type="profile" targetId="a481-0f78-fa02-a3b9"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <costs>
@@ -1228,9 +1280,6 @@ Terminator armour confers a 2+ Armour save.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="8f3d-ef37-d5bd-c7a5" name="Leman Russ Squadron" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5211-5e6a-a474-4f24" type="max"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry id="0aea-4462-1329-4e1c" name="Leman Russ Battletank" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -1376,6 +1425,14 @@ Terminator armour confers a 2+ Armour save.</characteristic>
                     <infoLink name="Hunter-Killer Missile" id="c98d-fc0f-be3b-02c6" hidden="false" type="profile" targetId="f5aa-454d-e0cd-863e"/>
                   </infoLinks>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Searchlights" hidden="false" id="b2e6-6d05-12cc-0468">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Searchlights" id="42ab-21d9-8a0e-9564" hidden="false" type="profile" targetId="c50c-3005-7846-a79e"/>
+                  </infoLinks>
+                </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="f940-a448-8377-2d0c" name="Turret Mount:" hidden="false" collective="false" import="true">
@@ -1461,6 +1518,13 @@ Terminator armour confers a 2+ Armour save.</characteristic>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="140"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Smoke Launchers" id="b0da-3e04-7520-cfdc" hidden="false" type="profile" targetId="7ff5-cd30-5c53-c8aa"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2cb9-6c05-3c63-063b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="709d-c085-257a-5eef"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -2851,6 +2915,18 @@ While at least one model with a voxcaster is present on the battlefield and not 
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entire Squad may take Bayonets" hidden="false" id="dbda-827b-d25a-ce2c">
+              <modifiers>
+                <modifier type="increment" value="1" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="1bde-6255-8537-4803" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Bayonet" id="7856-c21e-fe0d-996b" hidden="false" type="profile" targetId="a481-0f78-fa02-a3b9"/>
+              </infoLinks>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup name="Two may take a weapon from this list:" id="8450-7c5b-89e6-7d22" hidden="false">
@@ -3277,7 +3353,7 @@ While at least one model with a voxcaster is present on the battlefield and not 
                 <infoLink name="Multi-Laser" id="860d-53b3-f655-9644" hidden="false" type="profile" targetId="dd12-fa9f-c59d-b4d5"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3867,9 +3943,297 @@ While at least one model with a voxcaster is present on the battlefield and not 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b55-4f0f-7ecb-d78e"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Entire Squad may take Bayonets" hidden="false" id="52b7-487a-84f8-fc24">
+          <modifiers>
+            <modifier type="increment" value="1" field="e7de-8dcf-403a-b76a">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="dffd-6a33-bcc4-cbab" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Bayonet" id="5be5-2e9f-5f76-4393" hidden="false" type="profile" targetId="a481-0f78-fa02-a3b9"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <infoLinks>
         <infoLink name="Frag Grenades" id="569f-ceda-01d9-224f" hidden="false" type="profile" targetId="3b31-8ac4-2152-876b"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rogal Dorn Squadron" hidden="false" id="80e5-73d3-e862-abb6">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Rogal Dorn Battletank" hidden="false" id="3cd0-59e4-c92f-c4ae">
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="275"/>
+          </costs>
+          <profiles>
+            <profile name="Rogal Dorn Battletank" typeId="5d05-b85a-ce8a-a2e5" typeName="Vehicle" hidden="false" id="4673-5906-b524-a978">
+              <characteristics>
+                <characteristic name="BS" typeId="1bb0-95e0-a42a-3545">3</characteristic>
+                <characteristic name="Front" typeId="4bfa-429f-5871-ec8b">14</characteristic>
+                <characteristic name="Side" typeId="678c-ae54-8f51-b1df">13</characteristic>
+                <characteristic name="Rear" typeId="ba30-3821-8b66-5ba0">13</characteristic>
+                <characteristic name="HP" typeId="5e13-b98b-8be5-0dd9">5</characteristic>
+                <characteristic name="Type" typeId="bea4-6273-1ca3-52cf">Vehicle (Tank, Heavy)</characteristic>
+                <characteristic name="Movement" typeId="8f2e-a02c-1f7b-55d4">12&quot;</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Turret Mount" id="030c-12f9-f7ab-1ef8" hidden="false" defaultSelectionEntryId="6f74-1f7b-8d5c-254a">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Praetorian Battlecannon" hidden="false" id="6f74-1f7b-8d5c-254a">
+                  <profiles>
+                    <profile name="Praetorian Battlecannon" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="fcc7-3eaf-a5c8-f199">
+                      <characteristics>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">48&quot;</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">8</characteristic>
+                        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 2, Large Blast, Breaching (6+), Pinning</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Oppressor Cannon with Coaxial Autocannon" hidden="false" id="86fd-1c85-f99e-b1f3">
+                  <profiles>
+                    <profile name="Oppressor Cannon" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="4603-3869-b889-0df7">
+                      <characteristics>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">72&quot;</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">10</characteristic>
+                        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
+                        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 2, Sunder, Brutal (3)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="50"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Autocannon" id="c367-7c6a-48a6-2fd0" hidden="false" type="profile" targetId="bafe-36b0-c13b-9124">
+                      <modifiers>
+                        <modifier type="set" value="Heavy 4" field="79ff-eaa1-5809-53f3"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23a2-ef74-8f63-48a2"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a951-c574-fddf-cb63"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Centreline Mount" id="8573-c10b-67d7-fc41" hidden="false" defaultSelectionEntryId="6d1f-3e7f-f896-5921">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Assault Cannon" hidden="false" id="6d1f-3e7f-f896-5921">
+                  <infoLinks>
+                    <infoLink name="Assault Cannon" id="ffbb-b43f-dcce-3a20" hidden="false" type="profile" targetId="64c8-fb7b-b876-b5d6"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Coaxial Autocannon" hidden="false" id="ee17-1ba3-554f-2abf">
+                  <infoLinks>
+                    <infoLink name="Autocannon" id="7aa8-969a-f799-7776" hidden="false" type="profile" targetId="bafe-36b0-c13b-9124">
+                      <modifiers>
+                        <modifier type="set" value="Heavy 4" field="79ff-eaa1-5809-53f3"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="349e-3300-1c9c-3e87"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d8bb-4a35-381d-7200"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Sponson Mounts" id="2389-d781-00c7-9a36" hidden="false" defaultSelectionEntryId="30a6-a47a-7e93-28c5">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Two Heavy Stubbers" hidden="false" id="30a6-a47a-7e93-28c5">
+                  <infoLinks>
+                    <infoLink name="Heavy Stubber" id="f41b-b647-9fbc-fcd8" hidden="false" type="profile" targetId="2f99-7a46-2a42-8b9f"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Two Heavy Bolters" hidden="false" id="f5c2-a560-7e85-488e">
+                  <infoLinks>
+                    <infoLink name="Heavy Bolter" id="b576-277b-873e-eb3c" hidden="false" type="profile" targetId="ca4f-7c64-abdd-819d"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Two Heavy Flamers" hidden="false" id="ec6e-744d-007e-8dc3">
+                  <infoLinks>
+                    <infoLink name="Heavy Flamer" id="926e-8c75-e686-cf01" hidden="false" type="profile" targetId="4a87-2884-7397-fd84"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Two Multi-Meltas" hidden="false" id="5a48-5dd0-bdce-dc16">
+                  <infoLinks>
+                    <infoLink name="Multi-melta" id="5947-d7d6-3b10-e586" hidden="false" type="profile" targetId="c031-bf66-238d-35b6"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="30"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94d8-a22d-41c3-08ff"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3925-da5e-d270-7825"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Rogal Dorn Upgrades" id="83d7-63a9-fcee-4b1c" hidden="false" collective="false" import="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Dozer Blade" hidden="false" id="2414-b3aa-e215-0567">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Dozer Blade" id="d20f-15eb-76d0-c57e" hidden="false" type="profile" targetId="adc5-51c4-322b-39d1"/>
+                    <infoLink name="Dozer Blade" id="9838-e8d1-a6bd-6858" hidden="false" type="profile" targetId="41a6-b451-c647-13a6"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Extra Armour" hidden="false" id="7fe4-ceaf-fa0f-ee10">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Extra Armour" id="a9db-f3a7-4940-29bc" hidden="false" type="profile" targetId="712f-db62-39f7-584f"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="55e5-0d43-1faa-b8d4">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Hunter-Killer Missile" id="b28e-aa4a-7210-f8ff" hidden="false" type="profile" targetId="f5aa-454d-e0cd-863e"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Flare Shield" hidden="false" id="1952-4360-2396-efba">
+                  <infoLinks>
+                    <infoLink name="Flare Shield" id="0fa2-b0f9-c69e-67ed" hidden="false" type="profile" targetId="4741-922b-0a6f-c203"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="50"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Searchlights" hidden="false" id="6384-d172-c7fd-9dcf">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Searchlights" id="bd76-fe13-bfde-567f" hidden="false" type="profile" targetId="c50c-3005-7846-a79e"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="89aa-eef7-987c-2b1e"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Pintle Mount" id="ee75-96d0-58b3-402e" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Stubber" hidden="false" id="0d42-04e9-43ed-10b1">
+                  <infoLinks>
+                    <infoLink name="Heavy Stubber" id="3747-aa7f-bbba-89e3" hidden="false" type="profile" targetId="2f99-7a46-2a42-8b9f"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="2e79-7701-7252-8690">
+                  <infoLinks>
+                    <infoLink name="Heavy Flamer" id="f342-eced-593e-7ed0" hidden="false" type="profile" targetId="4a87-2884-7397-fd84"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Multi-Laser" hidden="false" id="1768-1de5-54be-e226">
+                  <infoLinks>
+                    <infoLink name="Multi-Laser" id="c41f-dfa4-61f1-bbb4" hidden="false" type="profile" targetId="dd12-fa9f-c59d-b4d5"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bdaf-9354-ff3f-d45c"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="May exchange Battlecannon and Centrelink Mount for Subjugator Cannon" hidden="false" id="ff66-712c-1ae0-483d">
+              <profiles>
+                <profile name="Subjugator Cannon" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="cbe5-f865-ee16-a2b3">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">72&quot;</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">12</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Ordnance 3, Sunder, Brutal (3)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="35"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f575-b578-c64d-b378"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1a60-6fce-8f1a-461a"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2936-26a5-c44f-c7c2"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="Smoke Launchers" id="952f-4b31-8c7c-9b8f" hidden="false" type="profile" targetId="7ff5-cd30-5c53-c8aa"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Primaris Psyker" hidden="false" id="7c29-dbf9-b7f0-05a4">
+      <costs>
+        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="50"/>
+      </costs>
+      <profiles>
+        <profile name="Primaris Psyker" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="a443-0ae9-4a40-efcc">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Psyker, Character)</characteristic>
+            <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">6&quot;</characteristic>
+            <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+            <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+            <characteristic name="S" typeId="23ae-6026-aebd-abc3">3</characteristic>
+            <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">3</characteristic>
+            <characteristic name="W" typeId="a763-cbc8-2080-a4fb">2</characteristic>
+            <characteristic name="I" typeId="ea41-893b-3f82-5482">3</characteristic>
+            <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
+            <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
+            <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">5+</characteristic>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">It&apos;s For Your Own Good</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Psychic Discipline" id="56bd-621e-f71b-e29f" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Biomancy" hidden="false" id="30af-faef-2840-3d7d" type="selectionEntryGroup" targetId="840e-c496-0441-ba25"/>
+            <entryLink import="true" name="Divination" hidden="false" id="5f83-10ba-3640-bc3c" type="selectionEntryGroup" targetId="7ea5-9df4-33f4-83c3"/>
+            <entryLink import="true" name="Sanctus" hidden="false" id="cabb-2e4c-8c76-0004" type="selectionEntryGroup" targetId="be72-9e20-115e-68d8"/>
+            <entryLink import="true" name="Telekinesis" hidden="false" id="297f-40fb-ecec-2aef" type="selectionEntryGroup" targetId="0185-eb3b-e34b-a776"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1adb-4021-751d-4ae1"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ead5-94a4-fa1a-8115"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Force Staff" id="e2ec-0f73-a525-d408" hidden="false" type="profile" targetId="ce8a-e461-368b-1c81"/>
+        <infoLink name="Refractor Field" id="846e-5bea-a7bb-3c6b" hidden="false" type="profile" targetId="16b6-1360-e90d-f382"/>
+        <infoLink name="Frag Grenades" id="688c-e84f-46f8-07b3" hidden="false" type="profile" targetId="3b31-8ac4-2152-876b"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -3880,7 +4244,28 @@ While at least one model with a voxcaster is present on the battlefield and not 
     <rule id="7def-8fe7-c1aa-816c" name="Voice of Command" hidden="false">
       <description>A model with this special rule is known as an officer. An officer can issue one order each turn. Orders are issued and their effects resolved at the start of your Shooting phase. If you have more than one officer, or if you have an officer that has a special rule allowing it to issue more than one order a turn, issue and resolve each order one at a time.
 
-An officer can attempt to issue an order provided he is not locked in combat, embarked in a vehicle or building, falling back, or has gone to ground. Issuing an order does not prevent the officer’s unit from acting (shooting, Running etc.) later in that phase.</description>
+An officer can attempt to issue an order provided he is not locked in combat, embarked in a vehicle or building, falling back, or has gone to ground. Issuing an order does not prevent the officer’s unit from acting (shooting, Running etc.) later in that phase.
+
+
+Issuing an Order
+To issue an order, declare the order your officer is attempting to issue and select a single friendly non-vehicle Astra Militarum that is within 12&quot; of the officer – this can be the officer’s own unit if you wish. We call this unit the ‘ordered unit’. The ordered unit must then take a Leadership test to see if the order has been understood and acted upon. If the test is passed, the order takes effect as specified in its description.
+
+
+If the test is failed, the order does not take effect.
+
+
+Unless an order causes the ordered unit to make a shooting attack or Run, receiving it does not prevent the ordered unit from acting later in that phase, whether the order was successful or not.
+
+
+Orders cannot be issued to embarked units or units that previously received an order that phase (whether or not that order was successful). Unless otherwise stated, orders cannot be issued to units that are locked in combat, are falling back, or have gone to ground.
+
+
+Incompetent Command
+If a double 6 is rolled for the ordered unit’s Leadership test, the order does not take effect, and no further orders can be issued, by any officer, for the remainder of this turn.
+
+
+Inspired Tactics
+If a double 1 is rolled for the ordered unit’s Leadership test, once the order has been resolved all further orders issued, by any officer, are automatically successful for the remainder of this turn.</description>
     </rule>
     <rule id="90af-b8a8-2069-00b9" name="Chain of Command" hidden="false">
       <description>This model may only be an army&apos;s Warlord if the Primary Detachment contains no models with the Senior Officer Special rule.</description>
@@ -3925,6 +4310,9 @@ The Tank Commander’s unit must make a shooting attack. After this shooting att
     </rule>
     <rule name="All-terrain APC" id="4e30-b4c8-8982-a029" hidden="false">
       <description>This vehicle re-rolls all failed Dangerous Terrain tests.</description>
+    </rule>
+    <rule name="It&apos;s For Your Own Good" id="7e0c-09b4-310e-c944" hidden="false">
+      <description>If a Primaris Psyker suffers Perils of the Warp whilst in the same unit as a Commissar (of any type), the Primaris Psyker will be executed – after resolving the usual effects, remove the Primaris Psyker as a casualty.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -4001,6 +4389,109 @@ While at least one model with a voxcaster is present on the battlefield and not 
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="3"/>
           </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Heirlooms of War" id="b9a6-5fdf-00e4-c7ba" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="The Laurels of Command" hidden="false" id="d98d-ea97-f9f8-c778">
+          <profiles>
+            <profile name="The Laurels of Command" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="4f69-1ecf-da25-ecbf">
+              <characteristics>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">The Laurels of Command are a callous and controversial means to ensure obedience. Concealed within their peerless artistry is a band of empathic-impulsion circuitry which allows the wearer limited control over the minds of indoctrinated individuals via subliminal suggestion. Under their effects even cowards fight to the last, while orders are executed in perfect synchronisation. However, if the officer wearing the Laurels is slain, the echoes of his death can leave his subordinates reeling in confusion.
+
+
+Once per game the bearer of the Laurels of Command may choose to have an order issued by the Voice of Command to be issued as if it were an Inspired Tactics roll.  However, if the model with the Laurels is removed as a casualty, all friendly units from the Astra Militarum within 6&quot; must take an immediate Pinning test.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="45"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7fd8-bc62-b2f3-4d67" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Deathmask of Ollanius" hidden="false" id="2287-a9d6-a443-fe2d">
+          <profiles>
+            <profile name="The Deathmask of Ollanius" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="b51a-25e6-eb28-9fa1">
+              <characteristics>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Ollanius the Pious is the epitome of Imperial sainthood, believed martyred at the hands of Horus himself. In the millennia since his passing, Ollanius’ deathmask has been revered as a holy relic; whosoever wears this ancient artefact is granted the determination and endurance of the famous martyr himself. The mask is a terrifying piece of craftsmanship, depicting in obsidian and void-fired bronze the agonised visage of a tortured angel. It is said that, in the presence of traitors, the Deathmask will weep tears of blood.
+
+
+The bearer of the Deathmask of Ollanius gains a 4+ invulnerable save, and has the It Will Not Die (6+) and Fear (1) special rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="20a7-63c8-8b94-6d90" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Kurov&apos;s Aquila" hidden="false" id="c592-fd10-77e1-e71e">
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="60"/>
+          </costs>
+          <profiles>
+            <profile name="Kurov&apos;s Aquila" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="9dc3-d0b2-6549-666e">
+              <characteristics>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">General Kurov was one of the most gifted officers in Imperial history. Upon retirement, he recorded dozens of tactical treatises that were translated into voxghosts by the Adeptus Mechanicus and uploaded into a two-headed avian servitor referred to as ‘Kurov’s Aquila’. A senior officer who possesses this prestigious tool can turn to it for tactical guidance, addressing his questions to the hunched machine-bird. In response, the servitor’s blindfolded head will vocalise the most relevant vox-ghost in Kurov’s stentorian tones. The other head’s eyes glow above its bound-shut beak as they project a hololithic display of Kurov himself, arms folded and dress uniform immaculate, his imago flickering as it reveals the secrets of the foe.
+
+
+The officer, and all friendly units from Codex: Astra Militarum within 6&quot;, have the Preferred Enemy special rule. In addition, the bearer may re-roll a single failed Leadership test per turn</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4fe4-a886-0c65-2682" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5e3f-bbe6-e0c2-d9e3"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6a34-f5ca-93df-d358" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Warlord" id="6a34-f5ca-93df-d358" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f323-c98a-1ac7-9141" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Master of Command" hidden="false" id="0487-6c60-3f0c-fddf">
+          <rules>
+            <rule name="Master and Commander" id="343f-8fb4-5d9c-f42f" hidden="false">
+              <description>The Warlord may issue one additional order each turn. In addition, the first order issued by this Warlord is automatically passed.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Grand Strategist" hidden="false" id="88fe-ac9c-c0ed-9a76">
+          <rules>
+            <rule name="Grand Strategist" id="77b1-af29-a100-9f65" hidden="false">
+              <description>If your army includes a model with this Warlord trait, during deployment you may give 2 units in your army the Outflank special rule.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Implacable Determination" hidden="false" id="9385-0fcb-710e-2b9e">
+          <rules>
+            <rule name="Implacable Determination" id="9fcc-404f-f942-18b7" hidden="false">
+              <description>The Warlord and his unit have the Relentless special rule.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Old Grudges" hidden="false" id="4111-09ea-dd5b-eca3">
+          <rules>
+            <rule name="Old Grudges" id="03a5-a5d7-0d3d-d947" hidden="false">
+              <description>While a Warlord with this Warlord trait is on the battlefield, at the start of each Battle Round, you may select a single enemy unit on or off the battlefield. The Warlord and any attached unit may Re-roll Hit Rolls, Wound Rolls and Penetration Rolls against that target unit until the end of the battle round.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
