@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="a773-03a1-5b4e-2bc0" name="Grunt Squad" hidden="false" collective="false" import="true" targetId="f600-c88f-4166-4d69" type="selectionEntry">
       <categoryLinks>
@@ -242,6 +242,12 @@
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
                       </costs>
                     </entryLink>
+                    <entryLink import="true" name="Carbine" hidden="false" id="e1a7-6c68-f911-d1bc" type="selectionEntry" targetId="cb0c-67d0-1f28-ea64">
+                      <costs>
+                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Brute Shot" hidden="false" id="2e15-d87b-546b-e3e4" type="selectionEntry" targetId="dc2e-50be-6a29-644f"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -366,6 +372,13 @@
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Carbine" hidden="false" id="3e5a-d691-6ef2-f571" type="selectionEntry" targetId="cb0c-67d0-1f28-ea64">
+                      <costs>
+                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
@@ -516,7 +529,11 @@
         <selectionEntryGroup name="One in ten may take a Heavy Weapon:" id="690e-89a0-795a-63f7" hidden="false">
           <entryLinks>
             <entryLink import="true" name="Fuel Rod Gun" hidden="false" id="41d2-e2d6-9e3b-ca7e" type="selectionEntry" targetId="ae23-4cf7-ed45-f7f5"/>
-            <entryLink import="true" name="Pek-Pattern Plasma Cannon" hidden="false" id="b0c2-6f12-78ea-b8ca" type="selectionEntry" targetId="8774-5e1b-c5ab-de52"/>
+            <entryLink import="true" name="Pek-Pattern Plasma Cannon" hidden="false" id="b0c2-6f12-78ea-b8ca" type="selectionEntry" targetId="8774-5e1b-c5ab-de52">
+              <modifiers>
+                <modifier type="set" value="10" field="e7de-8dcf-403a-b76a"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="1dc6-4586-3065-81df"/>
@@ -552,7 +569,7 @@
             <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Energy Shielding (3)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -561,13 +578,6 @@
           <description>A unit attached to a Field Marshal may use the Field Marshal&apos;s leadership.</description>
         </rule>
       </rules>
-      <infoLinks>
-        <infoLink id="4d07-5231-2cd5-0cc6" name="Energy Shielding" hidden="false" targetId="62ee-6610-ca13-96b4" type="rule">
-          <modifiers>
-            <modifier type="set" field="name" value="Energy Shielding (3)"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="6539-35d7-7ce9-ba73" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -611,7 +621,7 @@
           <selectionEntries>
             <selectionEntry id="665a-951c-5040-1a43" name="Fuel Rod Gun" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="851c-3d98-8c29-ba15" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="851c-3d98-8c29-ba15" type="max"/>
               </constraints>
               <profiles>
                 <profile id="0990-d02a-1046-8359" name="Fuel Rod Gun" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
@@ -634,6 +644,11 @@
               <modifiers>
                 <modifier type="set" field="e622-93f7-e062-4cf7" value="2"/>
               </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Carbine" hidden="false" id="d128-a865-db33-d71e" type="selectionEntry" targetId="cb0c-67d0-1f28-ea64">
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -667,23 +682,16 @@
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">9</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Energy Shielding (2)</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="1fac-80b8-cbec-2c6b" name="Energy Shielding" hidden="false" targetId="62ee-6610-ca13-96b4" type="rule">
-              <modifiers>
-                <modifier type="set" field="name" value="Energy Shielding (2)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
           <selectionEntries>
             <selectionEntry id="0716-18b9-8d54-f753" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="b901-bced-dd30-ef6a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe47-4d10-becf-20c0" type="equalTo"/>
+                    <condition field="selections" scope="ed8b-9128-07ad-2085" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe47-4d10-becf-20c0" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1185,7 +1193,7 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Jackal Squad" hidden="false" id="d659-6a9a-9810-f7c9">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Jackals" hidden="false" id="5d8e-32c6-fe5d-ceb2">
+        <selectionEntry type="model" import="true" name="Jackals" hidden="false" id="5d8e-32c6-fe5d-ceb2">
           <profiles>
             <profile name="Jackal" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="7c9a-13da-13be-270c">
               <characteristics>
@@ -1271,13 +1279,34 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
           </selectionEntryGroups>
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="216c-d59b-8726-2c86"/>
-            <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="fd65-d710-21dd-b33f"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="fd65-d710-21dd-b33f"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="One in 5 may replace their weapon and Gauntlet with:" id="af1f-4e03-7916-09c0" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Carbine" hidden="false" id="cf7f-9f11-77b8-023a" type="selectionEntry" targetId="cb0c-67d0-1f28-ea64">
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="b80d-dbab-e474-17ad"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="b80d-dbab-e474-17ad">
+              <repeats>
+                <repeat value="5" repeats="1" field="selections" scope="d659-6a9a-9810-f7c9" childId="model" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <profiles>
         <profile name="Point-Defence Gauntlet" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="e4b6-1a7c-c206-fb34">
           <characteristics>
@@ -1412,12 +1441,12 @@ In addition, when resolving shooting attacks from the front arc, treat the model
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Fuel Rod Gun" hidden="false" id="ae23-4cf7-ed45-f7f5" collective="false">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e808-2631-cc6a-8b42" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e808-2631-cc6a-8b42" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile name="Fuel Rod Gun" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="2965-165c-5cc4-4615">
               <characteristics>
-                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">14&quot;</characteristic>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">16&quot;</characteristic>
                 <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">6</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
                 <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 1, Small Blast, Brutal (2), Armourbane</characteristic>
@@ -1430,7 +1459,7 @@ In addition, when resolving shooting attacks from the front arc, treat the model
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Pek-Pattern Plasma Cannon" hidden="false" id="8774-5e1b-c5ab-de52" collective="false">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab4e-3a29-1fff-956d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ab4e-3a29-1fff-956d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile name="Pek-Pattern Plasma Cannon" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="1b92-d923-977b-9c42">
@@ -1450,7 +1479,18 @@ In addition, when resolving shooting attacks from the front arc, treat the model
     </selectionEntryGroup>
     <selectionEntryGroup name="Covenant Weapons" id="477a-fe96-23df-23a4" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Carbine" hidden="false" id="cb0c-67d0-1f28-ea64"/>
+        <selectionEntry type="upgrade" import="true" name="Carbine" hidden="false" id="cb0c-67d0-1f28-ea64">
+          <profiles>
+            <profile name="Carbine" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="7099-c51c-69e6-092c">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">30&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">-</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 1, Deflagrate, Sniper</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Brute Plasma Rifle" hidden="false" id="4097-b68a-e090-b269">
           <profiles>
             <profile name="Brute Plasma Rifle" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="04c1-dc81-0e15-5201">
@@ -1477,7 +1517,18 @@ In addition, when resolving shooting attacks from the front arc, treat the model
           </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Plasma Repeater" hidden="false" id="5b3d-15d8-e5ee-5684"/>
-        <selectionEntry type="upgrade" import="true" name="Brute Shot" hidden="false" id="dc2e-50be-6a29-644f"/>
+        <selectionEntry type="upgrade" import="true" name="Brute Shot" hidden="false" id="dc2e-50be-6a29-644f">
+          <profiles>
+            <profile name="Brute Shot" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="74d8-b3b6-410b-f005">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">6</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 1, Concussive</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Needler" hidden="false" id="dede-a00d-1c14-993a" collective="false">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22ee-9619-8abe-8bd6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
