@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d74c-5ac5-fbf4-56c3" name="Warhammer 40k: Emperor Edition" revision="30" battleScribeVersion="2.03" authorName="Cobrinion" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="d74c-5ac5-fbf4-56c3" name="Warhammer 40k: Emperor Edition" revision="31" battleScribeVersion="2.03" authorName="Cobrinion" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <publications>
     <publication id="3ff9-2058-b559-545b" name="Github" publisherUrl="Cobrinion/40kEmperor"/>
   </publications>
@@ -1499,7 +1499,7 @@ with, the unit breaks away from combat and must immediately move a number of inc
     <rule id="29dd-0901-558e-f89d" name="Firing Protocols" hidden="false">
       <description>When making a Shooting Attack, a model with this special rule may attack with a number of different weapons equal to the value of this special rule. For example, a model with Firing Protocols (2) may attack with up to two different weapons.</description>
     </rule>
-    <rule id="5ebf-6f3b-e001-fd3e" name="Preferred Enemy (X)" publicationId="3ff9-2058-b559-545b" page="245" hidden="false">
+    <rule id="5ebf-6f3b-e001-fd3e" name="Preferred Enemy" publicationId="3ff9-2058-b559-545b" page="245" hidden="false">
       <description>This rule is often presented as Preferred Enemy (X) where X identifies a specific type of foe. If the special rule does not specify a type of foe, then everyone is a Preferred Enemy of the unit. A unit that contains
 at least one model with this special rule re-rolls failed To Hit and To Wound rolls of 1 if attacking its Preferred Enemy. This applies both to shooting and close combat attacks.</description>
     </rule>
@@ -2319,11 +2319,7 @@ If a Hit! is rolled, the firing player places the marker so that it touches any 
 Once all of the markers are in place, add up the number of hits and roll To Wound for these hits. To determine wound allocation and cover saves, always assume the shot is coming from the centre of the first Blast marker that was placed in the Multiple Barrage.</description>
     </rule>
     <rule name="Psyker" id="efe6-c91d-9e37-1c3a" hidden="false">
-      <description>
-
-
-
-Common to all forms of psychic ability is the possibility of the Warp’s power rebelling and wreaking havoc on the Psyker and their allies. This is represented by the Perils of the Warp special rule. Most Psychic Powers and Weapons dictate under what conditions a Psyker must suffer Perils of the Warp, but in most cases this will be as the result of a failed Leadership test while using a Psychic Power or attack.
+      <description>Common to all forms of psychic ability is the possibility of the Warp’s power rebelling and wreaking havoc on the Psyker and their allies. This is represented by the Perils of the Warp special rule. Most Psychic Powers and Weapons dictate under what conditions a Psyker must suffer Perils of the Warp, but in most cases this will be as the result of a failed Leadership test while using a Psychic Power or attack.
 
 
 Whenever a Psyker or other model/unit suffers Perils of the Warp, apply the rule below:
@@ -2446,6 +2442,21 @@ Type: Haywire</description>
     </rule>
     <rule name="Plasma Flame" id="c04f-d42b-d615-9413" hidden="false">
       <description>When making an Overwatch attack, any failed To Hit rolls may be re-rolled.</description>
+    </rule>
+    <rule name="Salvo" id="c21d-a982-084f-4381" hidden="false">
+      <description>Salvo weapons are essentially more destructive Rapid Fire weapons.
+
+
+Salvo weapons have two numbers on their profile (listed after their type) separated by a ‘/’. A model armed with a Salvo weapon can move and fire at a target up to half its maximum range away. In this case, the number of shots is equal to the first number. If the model has not moved, it can instead fire a greater number of shots at a target up to the weapon’s maximum range. In this case, the number of shots is equal to the second number.
+
+
+Models that shoot with Salvo weapons in the Shooting phase cannot charge in the ensuing Assault phase.</description>
+    </rule>
+    <rule name="Daemon Primarch" id="b88c-9067-50f9-0606" hidden="false">
+      <description>All models with the Daemon Primarch Unit Type have the following special rules: Independent Character, Eternal Warrior, Fear (2), It Will Not Die (5+), Bulky (6), and Relentless. In addition, all models with the Daemon Primarch Unit Type always count as Character models.
+Models with the Daemon Primarch Unit Type are not affected by special rules that negatively modify their Characteristics (other than Wounds) and, in addition, models with the Daemon Primarch Unit Type always resolve Snap Shots at their normal BS. All models with the Daemon Primarch Unit Type are immune to the effects of the Fear (X) special rule, cannot be Pinned, and a unit that includes one or more models with the Daemon Primarch Unit Type automatically passes Pinning and Regroup tests and cannot choose to fail a Morale check due to the Our Weapons Are Useless special rule. When a unit that includes one or more models with the Daemon Primarch Unit Type fails a Morale check, the unit does not Fall Back as per the standard rules, but instead suffers D3 automatic Wounds with no Saves of any kind allowed which must be allocated to a model with the Daemon Primarch or Daemon Unit Type or the Corrupted Unit Sub-type.
+Any Hits inflicted by a model with the Daemon Primarch Unit Type, as part of either Shooting Attacks or in close combat, are allocated by that model’s controlling player and not the controlling player of the target unit. These Hits should form a separate Wound Pool.
+If an army includes any models with the Daemon Primarch Unit Type, then one of those models must be chosen as the army’s Warlord. • For the purposes of any special rule that affects or has additional effects that target models with the Daemon or Primarch Unit Type, a model with the Daemon Primarch Unit Type is considered to have the Daemon and Primarch Unit Types</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -3575,6 +3586,14 @@ Jetbikes can move over all other models and terrain freely. However, if a moving
         <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
         <characteristic name="AP" typeId="1544-3a5e-d421-edf9">-</characteristic>
         <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Flakk Missile" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="4858-d25a-2f50-f89a">
+      <characteristics>
+        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">48&quot;</characteristic>
+        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">7</characteristic>
+        <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+        <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 1, Skyfire</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

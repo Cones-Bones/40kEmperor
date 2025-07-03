@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="32f2-0953-3a19-b2e6" name="Imperial Guard" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="32f2-0953-3a19-b2e6" name="Imperial Guard" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <forceEntries>
     <forceEntry id="fe0e-3c3e-b918-f97e" name="Imperial Guard Battalion" hidden="false">
       <categoryLinks>
@@ -390,7 +390,7 @@ In addition, units from this Detachment that arrive via Deep Strike may re-roll 
           </constraints>
           <rules>
             <rule id="d1b0-0ac0-bd60-42f6" name="Bring it Down!" hidden="false">
-              <description>‘Bring it Down!’ can only be issued by a model with the Senior Officer special rule. The ordered unit must make a shooting attack. When resolving this shooting attack, all models in the ordered unit have the Tank Hunters and Monster Hunter special rules.</description>
+              <description>‘Bring it Down!’ can only be issued by a model with the Senior Officer special rule. The ordered unit must make a shooting attack. When resolving this shooting attack, all models in the ordered unit have the Tank Hunter and Monster Hunter special rules.</description>
             </rule>
             <rule id="45bd-c989-1817-e12e" name="Fire on my Target!" hidden="false">
               <description>‘Fire on my Target!’ can only be issued by a model with the Senior Officer special rule. The ordered unit must make a shooting attack. When resolving this shooting attack, all weapons in the ordered unit have the Ignores Cover special rule.</description>
@@ -1217,7 +1217,7 @@ Terminator armour confers a 2+ Armour save.</characteristic>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
               </costs>
               <infoLinks>
-                <infoLink name="Missile Launcher (Krak)" id="5f93-f100-02a1-5146" hidden="false" type="profile" targetId="4bfc-e9e2-f183-1f5a"/>
+                <infoLink name="Flakk Missile" id="5f93-f100-02a1-5146" hidden="false" type="profile" targetId="4858-d25a-2f50-f89a"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry id="2dc4-f1b3-9511-3d68" name="Heavy Bolter Team" hidden="false" collective="false" import="true" type="upgrade">
@@ -3527,6 +3527,9 @@ While at least one model with a voxcaster is present on the battlefield and not 
                   </modifiers>
                 </infoLink>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Twin-Linked Hot-Shot Volley Gun" hidden="false" id="c801-9973-54b7-558e">
               <profiles>
@@ -3539,6 +3542,9 @@ While at least one model with a voxcaster is present on the battlefield and not 
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Twin-Linked Heavy Stubbers" hidden="false" id="42b7-c73f-5ccf-d0fc">
               <infoLinks>
@@ -4021,6 +4027,13 @@ While at least one model with a voxcaster is present on the battlefield and not 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23a2-ef74-8f63-48a2"/>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a951-c574-fddf-cb63"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff66-712c-1ae0-483d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Centreline Mount" id="8573-c10b-67d7-fc41" hidden="false" defaultSelectionEntryId="6d1f-3e7f-f896-5921">
               <selectionEntries>
@@ -4046,6 +4059,13 @@ While at least one model with a voxcaster is present on the battlefield and not 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="349e-3300-1c9c-3e87"/>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d8bb-4a35-381d-7200"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff66-712c-1ae0-483d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Sponson Mounts" id="2389-d781-00c7-9a36" hidden="false" defaultSelectionEntryId="30a6-a47a-7e93-28c5">
               <selectionEntries>
@@ -4165,7 +4185,7 @@ While at least one model with a voxcaster is present on the battlefield and not 
             </selectionEntryGroup>
           </selectionEntryGroups>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="May exchange Battlecannon and Centrelink Mount for Subjugator Cannon" hidden="false" id="ff66-712c-1ae0-483d">
+            <selectionEntry type="upgrade" import="true" name="May exchange Turret and Centrelink Mount for Subjugator Cannon" hidden="false" id="ff66-712c-1ae0-483d">
               <profiles>
                 <profile name="Subjugator Cannon" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="cbe5-f865-ee16-a2b3">
                   <characteristics>

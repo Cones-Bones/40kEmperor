@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cb01-7be9-f390-5267" name="Chaos Space Marines" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="cb01-7be9-f390-5267" name="Chaos Space Marines" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="ab90-4e30-7e07-563f" name="Warband Origins" hidden="false"/>
   </categoryEntries>
@@ -2117,6 +2117,19 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Paragon Blade" hidden="false" id="e170-7cac-2a53-53ae" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b35b-6894-d4ac-ecb4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Paragon Blade" id="b6bf-3eb6-fc0a-84ed" hidden="false" targetId="34a9-1212-268b-9589" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
@@ -2800,9 +2813,6 @@
                           </characteristics>
                         </profile>
                       </profiles>
-                      <infoLinks>
-                        <infoLink id="4137-66e6-f304-bb35" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
-                      </infoLinks>
                       <costs>
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
                       </costs>
@@ -2825,7 +2835,6 @@
                       </constraints>
                       <infoLinks>
                         <infoLink id="3019-3531-eb8e-2bcf" name="Plasma Gun" hidden="false" targetId="da38-b09b-1ae5-a286" type="profile"/>
-                        <infoLink id="2a25-2fa2-4d9c-200b" name="Gets Hot" hidden="false" targetId="5d2d-493d-a032-fc88" type="rule"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
@@ -3094,7 +3103,6 @@
                         <infoLink id="78e3-2953-76c8-d075" name="Combi-Melta (Secondary)" hidden="false" targetId="60ce-118c-f84a-c085" type="profile"/>
                         <infoLink id="fa80-d30a-9584-a5e6" name="Boltgun" hidden="false" targetId="9420-4cc8-cd07-bc52" type="profile"/>
                         <infoLink id="614c-0e35-71f9-1702" name="One Use Only/One Shot Only" hidden="false" targetId="3243-b9fe-722d-4805" type="rule"/>
-                        <infoLink id="f513-9dde-5afa-b957" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
@@ -3395,8 +3403,6 @@
                       <infoLinks>
                         <infoLink id="999e-6d6b-969c-6f8b" name="Combi-Melta (Secondary)" hidden="false" targetId="60ce-118c-f84a-c085" type="profile"/>
                         <infoLink id="d4da-e0ad-67e1-3e1a" name="Boltgun" hidden="false" targetId="9420-4cc8-cd07-bc52" type="profile"/>
-                        <infoLink id="3581-b773-6c43-6d8b" name="One Use Only/One Shot Only" hidden="false" targetId="3243-b9fe-722d-4805" type="rule"/>
-                        <infoLink id="833b-825d-0abc-3db1" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
@@ -3615,12 +3621,12 @@
           <modifiers>
             <modifier type="increment" value="1" field="6920-48cf-5221-30fe">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="4d4e-af81-6397-adb4" childId="model" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="4d4e-af81-6397-adb4" childId="8f05-db37-967d-f4d7" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="1" field="75cc-d89d-7400-6a70">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="4d4e-af81-6397-adb4" childId="model" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="4d4e-af81-6397-adb4" childId="8f05-db37-967d-f4d7" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -3854,7 +3860,7 @@ Explodes results add D3&quot; to radius.</description>
             <characteristic name="Side" typeId="678c-ae54-8f51-b1df">12</characteristic>
             <characteristic name="Rear" typeId="ba30-3821-8b66-5ba0">10</characteristic>
             <characteristic name="HP" typeId="5e13-b98b-8be5-0dd9">3</characteristic>
-            <characteristic name="Type" typeId="bea4-6273-1ca3-52cf">Tank, Transport</characteristic>
+            <characteristic name="Type" typeId="bea4-6273-1ca3-52cf">Tank, Transport, Crawling Advance, Melta Cutters, Assault Drill, Death From Below, Deep Strike, Subterranean Assault</characteristic>
             <characteristic name="Movement" typeId="8f2e-a02c-1f7b-55d4">8&quot;</characteristic>
           </characteristics>
         </profile>
@@ -3866,64 +3872,11 @@ Explodes results add D3&quot; to radius.</description>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="1976-51e0-2032-1556" name="Terrax Pattern Termite Assault Drill" hidden="false">
-          <description>* May not carry models with the Bulky, Very Bulky or Extremely Bulky special rules
-
-** In practice you may choose to open and embar/disembark from a single hatch on either side of the hull.</description>
-        </rule>
-        <rule id="f751-0dae-0dea-57a1" name="Melta Cutters" hidden="false">
-          <description>A Termite Assault Drill ignores difficult terrain and dangerous terrain.
-In addition, it adds 2 to its Strength when making ramming attacks against fortifications.</description>
-        </rule>
-        <rule id="8f3e-d2c0-16a3-1c5d" name="Crawling Advance" hidden="false">
-          <description>A Termite Assault Drill may never move faster than Combat Speed or move Flat Out.</description>
-        </rule>
-      </rules>
       <selectionEntries>
         <selectionEntry id="d205-aaf5-9113-2565" name="Deepstrike and Sub Assault Rules" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da92-ba49-175b-e478" type="max"/>
           </constraints>
-          <rules>
-            <rule id="6b05-d71d-5142-e8dc" name="Subterranean Assault" hidden="false">
-              <description>Should the Termite Assault Drill, and any unit it transports, enter play using the Deep Strike special rule, they count as being a
-Subterranean Assault vehicle for the wider use of the Subterranean Assault rule for your army. At the beginning of the controlling
-player’s first turn, they must choose half of their Subterranean Assault vehicles held in reserve for the purpose of Deep Striking
-(rounding up) to make a Subterranean Assault. These units arrive on the controlling player’s first player turn. The arrival of any
-remaining Subterranean Assault vehicles in the player’s force is rolled for as usual for the mission.
-
-This rule, while similar in function to the Drop Pod Assault special rule, does not interact with it for the purposes of calculating how
-many units may arrive on the table by Deep Strike. Armies may consist of units with both the Drop Pod Assault and Subterranean
-Assault rules unless otherwise noted.</description>
-            </rule>
-            <rule id="509b-c14d-788b-f042" name="Death From Below" hidden="false">
-              <description>Instead of the usual rules for Deep Striking, when a Subterranean Assault vehicle enters play via Deep Strike, place a Large Blast (5&quot;)
-marker on the table and scatter this to determine the final position of its arrival as per the Deep Strike special rule.
-
-Should this marker scatter on top of impassable terrain, a building, ruin, fortification, vehicle or any unit engaged in combat, reduce
-the scatter distance by the minimum required to avoid the obstacle. If the marker representing the arrival of the Termite was
-displaced in this way by a vehicle or fortification, the closest vehicle or fortification to the marker immediately suffers a Str 10 AP- hit
-– vehicles are hit on their Side armour. If the arrival of the Termite was instead displaced by any units engaged in close combat, all
-units in that combat suffer D6 Str 6 AP 4 hits. After the final position of the marker is determined, if the marker covers or touches any
-enemy or friendly unit, then that unit also suffers D6 Str 6 AP 4 hits.
-
-After all damage is resolved, the Subterranean Assault vehicle may be placed in any orientation so long as the centre of the Large Blast
-(5&quot;) marker is underneath part of the vehicle’s hull and it remains 1&quot; away from any fortification, vehicle or unit engaged in combat.
-The area under the Large Blast (5&quot;) marker is now difficult terrain for the rest of the game. Players may, should they wish to, instead
-represent this area with a piece of crater terrain.
-
-Should a Subterranean Assault vehicle be placed on top of any unit which does not pose an obstacle to its arrival as described above,
-the Death from Below special rule allows it to be placed as though the unit was not there. If some models in the unit would end up
-underneath the Subterranean Assault vehicle when it reaches its final position (it makes no difference whether the unit is Falling
-Back or not), these models must be moved by the controlling player out of the way by the shortest distance, leaving at least 1&quot; between
-them and the Subterranean Assault vehicle (and indeed any other unit) whilst maintaining unit coherency and staying on the
-tabletop. Any models that cannot manage this are crushed and removed from play as casualties with no saves allowed.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="328f-dd28-2141-1fe8" name="Deep Strike" hidden="false" targetId="5de7-dbec-8706-f21a" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -3937,6 +3890,9 @@ tabletop. Any models that cannot manage this are crushed and removed from play a
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Extra Armour" id="c7b1-3f6c-b578-a086" hidden="false" type="profile" targetId="712f-db62-39f7-584f"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="2454-9ce8-d5e7-7cc8" name="Auxiliary Drive" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -4310,9 +4266,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                       </characteristics>
                     </profile>
                   </profiles>
-                  <infoLinks>
-                    <infoLink id="8a76-5abd-6867-6fea" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
-                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
                   </costs>
@@ -4579,9 +4532,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                       </characteristics>
                     </profile>
                   </profiles>
-                  <infoLinks>
-                    <infoLink id="069b-7691-fd79-9a70" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
-                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
                   </costs>
@@ -5105,8 +5055,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                       <infoLinks>
                         <infoLink id="7c76-3680-4e80-fd93" name="Combi-Melta (Secondary)" hidden="false" targetId="60ce-118c-f84a-c085" type="profile"/>
                         <infoLink id="3d22-0f5e-6a03-ff0d" name="Boltgun" hidden="false" targetId="9420-4cc8-cd07-bc52" type="profile"/>
-                        <infoLink id="a0cc-5798-2a51-81b7" name="One Use Only/One Shot Only" hidden="false" targetId="3243-b9fe-722d-4805" type="rule"/>
-                        <infoLink id="f12d-d11a-067e-c5c4" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
@@ -5675,11 +5623,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="5e2b-03c6-1bc8-227f" name="Demagogue" page="0" hidden="false">
-          <description>Friendly units within 6&quot; must use the Dark Apostle&apos;s Ld.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="6832-0caa-33fd-609f" name="Frag Grenades" hidden="false" targetId="3b31-8ac4-2152-876b" type="profile"/>
         <infoLink id="149d-7d9a-ebac-9c1b" name="Krak Grenades" hidden="false" targetId="9af1-f354-beeb-0bfd" type="profile"/>
@@ -5698,8 +5641,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
           </constraints>
           <infoLinks>
             <infoLink id="091d-8055-66f6-cb95" name="Daemonic Wings" hidden="false" targetId="b2ae-d12d-4a10-1871" type="profile"/>
-            <infoLink id="b984-c218-93d7-6d93" name="Hammer of Wrath" hidden="false" targetId="a4d3-4e19-13d9-508e" type="rule"/>
-            <infoLink id="d2d6-eef0-bdb8-1a33" name="Bulky" hidden="false" targetId="65d1-8086-fb69-9579" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
@@ -5735,9 +5676,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
               </constraints>
               <infoLinks>
                 <infoLink id="0f32-10de-ff8d-5503" name="Indomitus Terminator Armour" hidden="false" targetId="a7b9-25b8-9b79-b5df" type="profile"/>
-                <infoLink id="ed94-f951-6de0-f87a" name="Bulky" hidden="false" targetId="65d1-8086-fb69-9579" type="rule"/>
-                <infoLink id="22f3-831a-f08f-884a" name="Deep Strike" hidden="false" targetId="5de7-dbec-8706-f21a" type="rule"/>
-                <infoLink id="3c2c-db31-cf95-335d" name="Relentless" hidden="false" targetId="37e2-a92b-40b4-d7cc" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
@@ -5761,9 +5699,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
               </constraints>
               <infoLinks>
                 <infoLink id="ac58-4f58-c9e4-179b" name="Cataphractii Terminator Armour" hidden="false" targetId="493f-7f11-6a34-df7f" type="profile"/>
-                <infoLink id="7818-b072-c3e5-0eda" name="Bulky" hidden="false" targetId="65d1-8086-fb69-9579" type="rule"/>
-                <infoLink id="a66c-f2a7-2484-43dd" name="Slow and Purposeful" hidden="false" targetId="32c0-0ff6-5533-d1bd" type="rule"/>
-                <infoLink id="8188-5a66-9236-0d04" name="Deep Strike" hidden="false" targetId="5de7-dbec-8706-f21a" type="rule"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="2db7-e65d-9d64-0418" name="Relics" hidden="false" targetId="6093-06d4-ef01-5a0b" primary="false"/>
@@ -5790,9 +5725,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
               </constraints>
               <infoLinks>
                 <infoLink id="7d4d-d2d1-3e77-0541" name="Tartaros Terminator Armour" hidden="false" targetId="66c6-5509-dda6-44aa" type="profile"/>
-                <infoLink id="0392-e207-6763-5650" name="Bulky" hidden="false" targetId="65d1-8086-fb69-9579" type="rule"/>
-                <infoLink id="3974-8557-6892-3be0" name="Deep Strike" hidden="false" targetId="5de7-dbec-8706-f21a" type="rule"/>
-                <infoLink id="892d-a330-fd7d-5882" name="Relentless" hidden="false" targetId="37e2-a92b-40b4-d7cc" type="rule"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="4ded-abe0-3669-8d9f" name="Relics" hidden="false" targetId="6093-06d4-ef01-5a0b" primary="false"/>
@@ -6333,8 +6265,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                           <infoLinks>
                             <infoLink id="80a7-65d0-7838-773c" name="Combi-Melta (Secondary)" hidden="false" targetId="60ce-118c-f84a-c085" type="profile"/>
                             <infoLink id="c157-76d9-346b-794d" name="Boltgun" hidden="false" targetId="9420-4cc8-cd07-bc52" type="profile"/>
-                            <infoLink id="c924-70d7-da07-5e20" name="One Use Only/One Shot Only" hidden="false" targetId="3243-b9fe-722d-4805" type="rule"/>
-                            <infoLink id="2215-7241-3007-4cf2" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
                           </infoLinks>
                           <costs>
                             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="7"/>
@@ -6591,18 +6521,6 @@ Limitations
       </costs>
     </selectionEntry>
     <selectionEntry id="d698-f7ba-f80a-6fc3" name="Pheonix Terminator Squad" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="1bf8-8362-20bd-58a8" name="Sudden Strike" publicationId="3ff9-2058-b559-545b" page="107" hidden="false">
-          <description>Units with this rule gain 1 Initiative during any phase when they charge.  This is cumulative with other bonuses.</description>
-        </rule>
-        <rule id="a36e-3126-c108-3c67" name="Living Icon" publicationId="3ff9-2058-b559-545b" page="30" hidden="false">
-          <description>The unit, and all friendly units with at least one model within 6&quot; of it, are considered to be victorious in any assault that would otherwise be a draw.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="5b32-e7d3-8a71-881e" name="Stubborn" hidden="false" targetId="662e-c83b-a347-db5d" type="rule"/>
-        <infoLink id="3e0c-2fb1-7089-addc" name="Implacable Advance" hidden="false" targetId="cf10-09e0-e302-56a9" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="87fc-b4a9-a594-ac50" name="Mark of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -6650,8 +6568,6 @@ Limitations
           </constraints>
           <infoLinks>
             <infoLink id="5339-3f6e-11e8-7433" name="Tartaros Terminator Armour" hidden="false" targetId="66c6-5509-dda6-44aa" type="profile"/>
-            <infoLink id="7dd7-e99c-06d3-bffb" name="Bulky" hidden="false" targetId="65d1-8086-fb69-9579" type="rule"/>
-            <infoLink id="5df2-3cca-c45c-d152" name="Relentless" hidden="false" targetId="37e2-a92b-40b4-d7cc" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
@@ -6711,7 +6627,7 @@ Limitations
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/5++</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Implacable Advance, Living Icon, Stubborn, Bulky Sudden Strike, Deep Strike, Relentless</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6738,14 +6654,10 @@ Limitations
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">9</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/5++</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Champion of Chaos, Warbands of Chaos, Bulky, Implacable Advance, Relentless, Living Icon, Stubborn, Sudden Strike, Deep Strike</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="9f45-011e-7599-6fef" name="Champion of Chaos" hidden="false" targetId="7627-935b-d6c1-9e31" type="rule"/>
-            <infoLink id="bdda-5cfe-ae2a-ce0c" name="Warbands of Chaos" hidden="false" targetId="debd-3a42-013d-be28" type="rule"/>
-          </infoLinks>
           <selectionEntries>
             <selectionEntry id="bdae-836a-a307-6c66" name="Gift of Mutation" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -6765,17 +6677,6 @@ Limitations
           </selectionEntries>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="40"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d344-c991-adf2-9824" name="Show Deepstrike Rules" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b55-65e0-eafa-7ce5" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="d843-6431-b1db-bc01" name="Deep Strike" hidden="false" targetId="5de7-dbec-8706-f21a" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b9e0-9487-4637-089e" name="Frag and Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -6919,17 +6820,6 @@ form a separate Wound Pool.
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3927-5fc5-98c1-5c25" type="max"/>
       </constraints>
-      <rules>
-        <rule id="a21f-4377-b935-9deb" name="Primarch" hidden="false">
-          <description>All Primarchs have the following special rules: Independent Character, Eternal Warrior, Fearless, It Will Not Die (5+), Bulky (4), and Relentless.
-In addition, all models with the Primarch unit type always count as
-Character models.
-• Primarchs are not affected by special rules that negatively modify their Characteristics (other than Wounds) and, in addition, Primarchs always resolve Snap Shots at their normal BS.
-• Any Hits inflicted by a Primarch, as part of either Shooting Attacks or in close combat, are allocated by the Primarch’s controlling player and not the controlling player of the target unit. These Hits should
-form a separate Wound Pool.
-• If an army includes any Primarch models, then one of those models must be chosen as the army’s Warlord.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="d498-fda4-ff1e-63f7" name="Frag Grenades" hidden="false" targetId="3b31-8ac4-2152-876b" type="profile"/>
         <infoLink id="81f4-99ff-6485-3d03" name="Krak Grenades" hidden="false" targetId="9af1-f354-beeb-0bfd" type="profile"/>
@@ -6954,21 +6844,11 @@ form a separate Wound Pool.
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">6</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Sublime Swordsman, Tactical Excellence, The Gilded Panoply,</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <rules>
-            <rule id="a765-7f00-8dd6-e147" name="Sublime Swordsman" hidden="false">
-              <description>When Fulgrim makes Melee Attacks as part of a Challenge, he gains a number of additional attacks equal to the amount which his Initiative Characteristic is greater than that of his opponent. For example, if Fulgrim attacks an enemy model with an Initiative Characteristic of 5 as part of a Challenge, Fulgrim’s Initiative of 8 grants him 3 extra Attacks</description>
-            </rule>
-            <rule id="1841-f3f8-bb99-dc1d" name="Tactical Excellence" hidden="false">
-              <description>No Reaction may be declared against a Move, Shooting Attack or Charge made by Fulgrim or a unit that he has joined.</description>
-            </rule>
-            <rule id="3a63-82a8-a667-08bd" name="The Gilded Panoply" hidden="false">
-              <description>The Gilded Panoply provides Fulgrim with a 2+ Armour Save, a 3+ Invulnerable Save against Melee
-Attacks and a 5+ Invulnerable Save against all other Wounds inflicted upon him</description>
-            </rule>
             <rule id="f77f-2692-cdea-3abb" name="Warlord: Seeker of Redemption" hidden="false">
               <description>If chosen as the army&apos;s Warlord, Fulgrim automatically has the Seeker of Redemption Warlord Trait and may not select any other Warlord Trait: 
 
@@ -7022,15 +6902,6 @@ In Search of Redemption: Models with this rule have +1ld and Hatred (Chaos Space
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="23d7-a70f-2bce-4ae2" name="Master-Crafted" hidden="false" targetId="1814-e927-17ca-b6d5" type="rule"/>
-            <infoLink id="f0f9-8a07-0672-738d" name="Murderous Strike" hidden="false" targetId="3868-1cb3-eb8e-88f4" type="rule">
-              <modifiers>
-                <modifier type="set" field="name" value="Murderous Strike (5)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="1de2-c080-a4fa-8fa1" name="Specialist Weapon" hidden="false" targetId="eb86-e6c7-073c-5338" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -7055,7 +6926,7 @@ In Search of Redemption: Models with this rule have +1ld and Hatred (Chaos Space
             <characteristic name="A" typeId="d535-b745-b613-a7ab">4</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Champion of Chaos, Fear (2), Inherited Precognition</characteristic>
           </characteristics>
         </profile>
         <profile id="7c00-3700-e29f-b218" name="Cloak of Flayed Skin" hidden="false" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item">
@@ -7064,11 +6935,6 @@ In Search of Redemption: Models with this rule have +1ld and Hatred (Chaos Space
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="991d-549b-2e92-a5e4" name="Inherited Precognition" hidden="false">
-          <description>At the start of any Assult Phase a Psychic check may be made for Decimus by the controlling player: This Psychic check must be made against a Leadership of 7. If this check is passed, Decimus gainst +1 WS and Attack for the Duration of that Assault phase. If the Check is failed, Decimus suffers Perils of the Warp.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="ba13-1e46-eb7b-ce8f" name="Fear" hidden="false" targetId="bbca-34a4-2d3d-8d2a" type="rule">
           <modifiers>
@@ -7133,7 +6999,7 @@ In Search of Redemption: Models with this rule have +1ld and Hatred (Chaos Space
       <profiles>
         <profile id="c03c-1b73-c811-591c" name="Fulgrim, Daemon Primarch of Slaanesh" hidden="false" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit">
           <characteristics>
-            <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Demon Primarch, Flying Monsterous Creature</characteristic>
+            <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Daemon Primarch, Flying Monsterous Creature</characteristic>
             <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">9&quot;</characteristic>
             <characteristic name="WS" typeId="9660-0df5-9c5d-3604">9</characteristic>
             <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">6</characteristic>
@@ -7144,33 +7010,10 @@ In Search of Redemption: Models with this rule have +1ld and Hatred (Chaos Space
             <characteristic name="A" typeId="d535-b745-b613-a7ab">7</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">2+/4++</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Serpentine Daemonform, Veterans of the Long War</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="d6d6-c713-e141-3e1c" name="Demon Primarch" hidden="false">
-          <description>All models with the Daemon Primarch Unit Type have the following special rules: Independent Character, Eternal Warrior, Fear (2), It Will Not Die (5+), Bulky (6), and Relentless. In addition, all models with the Daemon Primarch Unit Type always count as Character models.
-
-• Models with the Daemon Primarch Unit Type are not affected by special rules that negatively modify their Characteristics (other than Wounds) and, in addition, models with the Daemon Primarch Unit Type always resolve Snap Shots at their normal BS.
-
-• All models with the Daemon Primarch Unit Type are immune to the effects of the Fear (X) special rule, cannot be Pinned, and a unit that includes one or more models with the Daemon Primarch Unit Type automatically passes Pinning and Regroup tests and cannot choose to fail a Morale check due to the Our Weapons Are Useless special rule. When a unit that includes one or more models with the Daemon Primarch Unit Type fails a Morale check, the unit does not Fall Back as per the standard rules, but instead suffers D3 automatic Wounds with no Saves of any kind allowed which must be allocated to a model with the Daemon Primarch or Daemon Unit Type or the Corrupted Unit Sub-type.
-
-• Any Hits inflicted by a model with the Daemon Primarch Unit Type, as part of either Shooting Attacks or in close combat, are allocated by that model’s controlling player and not the controlling player of the target unit. These Hits should form a separate Wound Pool.
-
-• If an army includes any models with the Daemon Primarch Unit Type, then one of those models must be chosen as the army’s Warlord.
-
-• For the purposes of any special rule that affects or has additional effects that target models with the Daemon or Primarch Unit Type, a model with the Daemon Primarch Unit Type is considered to have the Daemon and Primarch Unit Types</description>
-        </rule>
-        <rule id="f262-1aba-42a6-f789" name="Veterans of the Long War" hidden="false">
-          <description>Models with this rule have +1ld and Hatred (Space Marines). This hatred applies to all Adeptus Astartes factions.</description>
-        </rule>
-        <rule id="3eda-f36d-8927-009d" name="Serpentine Daemonform" hidden="false">
-          <description>In the wake of his physical being becoming a vessel for the powers of the Warp, Fulgrim’s form became nigh indestructible. Despite his virtual immortality, Fulgrim’s monstrous pride often ensured that should a foe threaten to best him, he would dramatically leave the battlefield, denying them the satisfaction of besting him in combat. 
-Fulgrim&apos;s Serpentine Daemonform provides a 2+ Armour Save and a 4+ Invulnerable Save. Additionally, while Fulgrim has four or fewer wounds, add +1 to dice rolls made for his It Will Not Die (X) Special Rule.
-If, at the start of any of their player turns, Fulgrim has two or fewer Wounds and is not locked in combat, his controlling player may choose to remove Fulgrim from play as a casualty. If Fulgrim is removed from play in this manner, the opposing player achieves no Objectives or Secondary Objectives that would otherwise be scored by removing Fulgrim as a casualty</description>
-        </rule>
-      </rules>
       <selectionEntries>
         <selectionEntry id="51d8-2d9b-911c-7b7f" name="Blades of the Phonecian" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7547,7 +7390,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
                     <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57ff-cc12-eddc-2581" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="4ce0-4aed-de68-dca4" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
                     <infoLink id="24cc-9427-b807-5763" name="Meltagun" hidden="false" targetId="15cf-000e-a434-a3ad" type="profile"/>
                   </infoLinks>
                   <costs>
@@ -7659,17 +7501,12 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
             <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-            <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Adamantium Will (5+)</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="71e1-2bbf-36ce-d9e4" name="Psychic Hood" hidden="false" targetId="465b-9126-2731-ffc9" type="profile"/>
-        <infoLink id="582b-64af-3c3d-e8fa" name="Adamantium Will" hidden="false" targetId="e665-d068-6f9e-bf71" type="rule">
-          <modifiers>
-            <modifier type="set" field="name" value="Adamantium Will (5+)"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="e1bf-3879-bd94-4bf5" name="Force Weapons:" hidden="false" collective="false" import="true">
@@ -7683,8 +7520,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
               </constraints>
               <infoLinks>
                 <infoLink id="1d01-2cb9-6c66-9015" name="Force Axe" hidden="false" targetId="041d-5d07-71fe-da76" type="profile"/>
-                <infoLink id="6fb5-9de9-5f1b-5e77" name="Unwieldy" hidden="false" targetId="69cd-1f57-1f07-a602" type="rule"/>
-                <infoLink id="6400-f9fb-12df-1207" name="Force" hidden="false" targetId="d12d-b638-6e32-8d8e" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
@@ -7696,7 +7531,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
               </constraints>
               <infoLinks>
                 <infoLink id="39e0-af5d-f8bf-85f7" name="Force Maul" hidden="false" targetId="4cb1-3b5d-8b5f-911f" type="profile"/>
-                <infoLink id="2e24-7cac-a283-907a" name="Force" hidden="false" targetId="d12d-b638-6e32-8d8e" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
@@ -7708,8 +7542,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
               </constraints>
               <infoLinks>
                 <infoLink id="9c83-f20f-8c2b-9a99" name="Force Staff" hidden="false" targetId="ce8a-e461-368b-1c81" type="profile"/>
-                <infoLink id="7a27-2557-3fbb-d81e" name="Reach" hidden="false" targetId="ca2d-8422-ab7d-b899" type="rule"/>
-                <infoLink id="ba59-a30b-c7c0-3cc7" name="Force" hidden="false" targetId="d12d-b638-6e32-8d8e" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
@@ -7721,12 +7553,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
               </constraints>
               <infoLinks>
                 <infoLink id="851e-655a-f02d-3d98" name="Force Sword" hidden="false" targetId="e889-c397-968a-4705" type="profile"/>
-                <infoLink id="900b-6a00-6ed1-78d8" name="Rending" hidden="false" targetId="daf9-7786-40aa-8807" type="rule">
-                  <modifiers>
-                    <modifier type="set" field="name" value="Rending (6+)"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink id="3e4a-047b-2258-fcfa" name="Force" hidden="false" targetId="d12d-b638-6e32-8d8e" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
@@ -8386,19 +8212,11 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
             <characteristic name="Side" typeId="678c-ae54-8f51-b1df">12</characteristic>
             <characteristic name="Rear" typeId="ba30-3821-8b66-5ba0">12</characteristic>
             <characteristic name="HP" typeId="5e13-b98b-8be5-0dd9">3</characteristic>
-            <characteristic name="Type" typeId="bea4-6273-1ca3-52cf">Vehicle (Open-topped, Transport).</characteristic>
+            <characteristic name="Type" typeId="bea4-6273-1ca3-52cf">Vehicle (Open-topped, Transport), Drop Pod Assault, Inertial Guidance System</characteristic>
             <characteristic name="Movement" typeId="8f2e-a02c-1f7b-55d4"/>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="f631-2b26-e373-ad67" name="Drop Pod Assault" hidden="false">
-          <description>Drop Pods and units embarked upon them must be held in Deep Strike Reserve. At the beginning of your first turn, half of your Drop Pods (rounding up) automatically arrive from Reserve. The arrival of remaining Drop Pods is rolled for normally. Once a Drop Pod lands, all passengers must disembark and no model can embark for the rest of the game.</description>
-        </rule>
-        <rule id="9b56-c3d1-d4b3-d73d" name="Inertial Guidance System" hidden="false">
-          <description>If a Drop Pod scatters on top of impassable terrain or another model (friend or foe), reduce the scatter distance by the minimum required in order to avoid that obstacle. If the Drop Pod scatters off the edge of the board, it suffers a Deep Strike Mishap.</description>
-        </rule>
-      </rules>
       <selectionEntries>
         <selectionEntry id="b242-4cbe-489c-6c35" name="Interior Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -8757,7 +8575,7 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">1</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8784,14 +8602,10 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">8</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-                <characteristic typeId="3df9-f556-8725-fe75" name="Special Rules"/>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Champion of Chaos, Warbands of Chaos</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="ba1c-fe15-692c-da76" name="Champion of Chaos" hidden="false" targetId="7627-935b-d6c1-9e31" type="rule"/>
-            <infoLink id="bc81-8c26-2ca9-f159" name="Warbands of Chaos" hidden="false" targetId="debd-3a42-013d-be28" type="rule"/>
-          </infoLinks>
           <selectionEntries>
             <selectionEntry id="3c56-f10f-7028-87ba" name="Melta Bombs" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -8799,8 +8613,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
               </constraints>
               <infoLinks>
                 <infoLink id="9d95-74c2-43f9-0e19" name="Melta Bomb" hidden="false" targetId="4342-3fe8-c254-63ce" type="profile"/>
-                <infoLink id="04bc-3764-ed02-911b" name="Armourbane" hidden="false" targetId="6ba0-fe52-d3bc-761a" type="rule"/>
-                <infoLink id="7060-bc2d-d9d3-8c9b" name="Unwieldy" hidden="false" targetId="69cd-1f57-1f07-a602" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
@@ -8883,9 +8695,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
                       </characteristics>
                     </profile>
                   </profiles>
-                  <infoLinks>
-                    <infoLink id="7570-e1f6-1933-1f76" name="Pinning" hidden="false" targetId="0afb-1495-6aeb-c2c5" type="rule"/>
-                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
                   </costs>
@@ -8909,9 +8718,6 @@ A model with Resplendent Wings may still Run if it would normally be able to Run
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="4e33-a6cd-4265-25c3" name="Feel No Pain" hidden="false" targetId="f3a2-c2b0-6b0e-1653" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
           </costs>
@@ -9035,14 +8841,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
               <description>At the start of the Shooting face, the Sonic Dreadnought may choose to fire it&apos;s Sonic Weaponry in Overdriven mode. If this is done, all sonic weapons must be fired in this way for the remainder of the turn. This confers the Rending (5+) and Gets Hot special rules on these attacks.</description>
             </rule>
           </rules>
-          <infoLinks>
-            <infoLink id="c4e8-7f71-db78-c5d0" name="Rending" hidden="false" targetId="daf9-7786-40aa-8807" type="rule">
-              <modifiers>
-                <modifier type="set" field="name" value="Rending 5+"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="a1d8-ec36-c470-122b" name="Gets Hot" hidden="false" targetId="5d2d-493d-a032-fc88" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -9081,9 +8879,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="df56-5d7b-3119-1492" name="Rending" hidden="false" targetId="daf9-7786-40aa-8807" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
               </costs>
@@ -9102,9 +8897,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="fff2-b026-3e24-e4e1" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
@@ -9123,9 +8915,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="702f-1230-6dd4-c010" name="Gets Hot" hidden="false" targetId="5d2d-493d-a032-fc88" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
               </costs>
@@ -9144,9 +8933,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="dc9d-0692-455d-8580" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
               </costs>
@@ -9165,9 +8951,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="f72c-1ad8-eb92-7e83" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
               </costs>
@@ -9186,9 +8969,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="95d7-865e-78ab-1b6f" name="Armourbane" hidden="false" targetId="6ba0-fe52-d3bc-761a" type="rule"/>
-              </infoLinks>
               <entryLinks>
                 <entryLink id="0c85-617f-a80f-0f14" name="Dreadnought CCW In-Built" hidden="false" collective="false" import="true" targetId="a013-95d9-5e44-54c2" type="selectionEntryGroup"/>
               </entryLinks>
@@ -9231,9 +9011,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="8d48-aba4-8566-353c" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
@@ -9252,9 +9029,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="626a-35fd-f494-54c8" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
@@ -9281,9 +9055,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="39f3-ea48-2bd9-39b9" name="Pinning" hidden="false" targetId="0afb-1495-6aeb-c2c5" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
               </costs>
@@ -9309,9 +9080,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="5891-cb67-9178-2d9d" name="Rending" hidden="false" targetId="daf9-7786-40aa-8807" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
               </costs>
@@ -9330,9 +9098,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="efdf-71f6-9d92-4bd3" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
@@ -9351,9 +9116,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="8f66-be53-fc94-4d13" name="Gets Hot" hidden="false" targetId="5d2d-493d-a032-fc88" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
               </costs>
@@ -9372,9 +9134,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="ca9b-3c92-3988-18b1" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
               </costs>
@@ -9393,9 +9152,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="7a0a-c852-60b9-8e05" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="25"/>
               </costs>
@@ -9414,9 +9170,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="0adb-ee66-d27d-eee3" name="Armourbane" hidden="false" targetId="6ba0-fe52-d3bc-761a" type="rule"/>
-              </infoLinks>
               <entryLinks>
                 <entryLink id="cf5d-7299-a3f3-84c7" name="Dreadnought CCW In-Built" hidden="false" collective="false" import="true" targetId="a013-95d9-5e44-54c2" type="selectionEntryGroup"/>
               </entryLinks>
@@ -9459,9 +9212,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="3014-2afe-7493-21af" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
@@ -9477,9 +9227,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="bb13-4bd9-30a7-15b4" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
@@ -9506,9 +9253,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink id="d16c-c07a-b637-ffa3" name="Pinning" hidden="false" targetId="0afb-1495-6aeb-c2c5" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
               </costs>
@@ -9717,8 +9461,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
           <infoLinks>
             <infoLink id="3248-b6c2-c1bb-fda3" name="Combi-Melta (Secondary)" hidden="false" targetId="60ce-118c-f84a-c085" type="profile"/>
             <infoLink id="ab68-2fd0-9124-0ad2" name="Boltgun" hidden="false" targetId="9420-4cc8-cd07-bc52" type="profile"/>
-            <infoLink id="053d-6307-584b-7c8f" name="One Use Only/One Shot Only" hidden="false" targetId="3243-b9fe-722d-4805" type="rule"/>
-            <infoLink id="0c46-f653-3969-17cb" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
@@ -9933,9 +9675,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="836a-276f-6421-3245" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="50"/>
           </costs>
@@ -10064,7 +9803,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b68a-0a25-36ac-b960" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="5440-676b-a3bb-c30c" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
             <infoLink id="965f-73c5-9714-aa71" name="Meltagun" hidden="false" targetId="15cf-000e-a434-a3ad" type="profile"/>
           </infoLinks>
           <costs>
@@ -10383,11 +10121,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
               </characteristics>
             </profile>
           </profiles>
-          <rules>
-            <rule id="bdb3-74ce-0f57-0784" name="Daemon Weapon" hidden="false">
-              <description>At the start of each Fight sub-phase during which the bearer of a Daemon Weapon is locked in combat, roll a D6. On a roll of a 1, the model immediately suffers a Wound with no armour saves allowed and his Weapon Skill is 1 until the end of the phase. On a roll of 2+, the bearer gains that many additional Attacks until the end of the phase. If the bearer has multiple Melee weapons, only roll a D6 if he chooses to attack with a Daemon Weapon.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="35"/>
           </costs>
@@ -10430,7 +10163,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a7-d9ab-1b0e-4358" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="1438-4b20-a84f-f2a3" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
             <infoLink id="0fb1-1c00-d113-a19a" name="Meltagun" hidden="false" targetId="15cf-000e-a434-a3ad" type="profile"/>
           </infoLinks>
           <costs>
@@ -10479,8 +10211,6 @@ No model that is not also a Dreadnought may join a unit that includes Dreadnough
         <selectionEntry id="2b24-9480-1a39-1b03" name="Multi-Melta" hidden="false" collective="false" import="true" type="upgrade">
           <infoLinks>
             <infoLink id="b217-801d-56ed-e9f0" name="Multi-melta" hidden="false" targetId="c031-bf66-238d-35b6" type="profile"/>
-            <infoLink id="d053-8202-6f5a-ec22" name="Melta" hidden="false" targetId="25dd-f53c-779e-cefb" type="rule"/>
-            <infoLink id="f92b-ce59-2e9b-e7dc" name="Twin-Linked" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
@@ -10557,6 +10287,88 @@ At the end of the phase, roll a D6, on a 1 the unit loses a HP with no saves all
     <rule id="debd-3a42-013d-be28" name="Warbands of Chaos" hidden="false">
       <description>When a model with the Champion of Chaos special rule is removed as a casualty, the unit which contained this model must make D3 Str. 4. AP - hits, representing infighting for power. Fearless units instead take D3-1 hits (To a minimum of 0). Once these hits have been resolved, replace a model of your choosing from the unit with an identical model to that which was removed, without any upgrades.</description>
     </rule>
+    <rule name="Demagogue" id="ca97-85da-1f09-38c6" hidden="false" page="0">
+      <description>Friendly units within 6&quot; must use the Dark Apostle&apos;s Ld.</description>
+    </rule>
+    <rule name="Inherited Precognition" id="868a-c850-959b-9ae6" hidden="false">
+      <description>At the start of any Assult Phase a Psychic check may be made for Decimus by the controlling player: This Psychic check must be made against a Leadership of 7. If this check is passed, Decimus gainst +1 WS and Attack for the Duration of that Assault phase. If the Check is failed, Decimus suffers Perils of the Warp.</description>
+    </rule>
+    <rule name="Drop Pod Assault" id="b83b-6d94-50cc-3eb6" hidden="false">
+      <description>Drop Pods and units embarked upon them must be held in Deep Strike Reserve. At the beginning of your first turn, half of your Drop Pods (rounding up) automatically arrive from Reserve. The arrival of remaining Drop Pods is rolled for normally. Once a Drop Pod lands, all passengers must disembark and no model can embark for the rest of the game.</description>
+    </rule>
+    <rule name="Inertial Guidance System" id="d756-e315-65e9-18a3" hidden="false">
+      <description>If a Drop Pod scatters on top of impassable terrain or another model (friend or foe), reduce the scatter distance by the minimum required in order to avoid that obstacle. If the Drop Pod scatters off the edge of the board, it suffers a Deep Strike Mishap.</description>
+    </rule>
+    <rule name="Sublime Swordsman" id="1bd8-fd65-da4a-6483" hidden="false">
+      <description>When Fulgrim makes Melee Attacks as part of a Challenge, he gains a number of additional attacks equal to the amount which his Initiative Characteristic is greater than that of his opponent. For example, if Fulgrim attacks an enemy model with an Initiative Characteristic of 5 as part of a Challenge, Fulgrim’s Initiative of 8 grants him 3 extra Attacks</description>
+    </rule>
+    <rule name="Tactical Excellence" id="44eb-228d-7c07-7488" hidden="false">
+      <description>No Reaction may be declared against a Move, Shooting Attack or Charge made by Fulgrim or a unit that he has joined.</description>
+    </rule>
+    <rule name="The Gilded Panoply" id="c57b-fa3a-4de7-bc4a" hidden="false">
+      <description>The Gilded Panoply provides Fulgrim with a 2+ Armour Save, a 3+ Invulnerable Save against Melee
+Attacks and a 5+ Invulnerable Save against all other Wounds inflicted upon him</description>
+    </rule>
+    <rule name="Serpentine Daemonform" id="2918-9f38-a832-e6cd" hidden="false">
+      <description>In the wake of his physical being becoming a vessel for the powers of the Warp, Fulgrim’s form became nigh indestructible. Despite his virtual immortality, Fulgrim’s monstrous pride often ensured that should a foe threaten to best him, he would dramatically leave the battlefield, denying them the satisfaction of besting him in combat. 
+Fulgrim&apos;s Serpentine Daemonform provides a 2+ Armour Save and a 4+ Invulnerable Save. Additionally, while Fulgrim has four or fewer wounds, add +1 to dice rolls made for his It Will Not Die (X) Special Rule.
+If, at the start of any of their player turns, Fulgrim has two or fewer Wounds and is not locked in combat, his controlling player may choose to remove Fulgrim from play as a casualty. If Fulgrim is removed from play in this manner, the opposing player achieves no Objectives or Secondary Objectives that would otherwise be scored by removing Fulgrim as a casualty</description>
+    </rule>
+    <rule name="Veterans of the Long War" id="c368-5093-e445-8b11" hidden="false">
+      <description>Models with this rule have +1ld and Hatred (Space Marines). This hatred applies to all Adeptus Astartes factions.</description>
+    </rule>
+    <rule name="Living Icon" id="0df0-76c6-cfce-8703" hidden="false" publicationId="3ff9-2058-b559-545b" page="30">
+      <description>The unit, and all friendly units with at least one model within 6&quot; of it, are considered to be victorious in any assault that would otherwise be a draw.</description>
+    </rule>
+    <rule name="Sudden Strike" id="037d-31ea-19dc-39e2" hidden="false" publicationId="3ff9-2058-b559-545b" page="107">
+      <description>Units with this rule gain 1 Initiative during any phase when they charge.  This is cumulative with other bonuses.</description>
+    </rule>
+    <rule name="Crawling Advance" id="c854-3e1f-fd25-7443" hidden="false">
+      <description>A Termite Assault Drill may never move faster than Combat Speed or move Flat Out.</description>
+    </rule>
+    <rule name="Melta Cutters" id="edde-97a3-9cbe-9808" hidden="false">
+      <description>A Termite Assault Drill ignores difficult terrain and dangerous terrain.
+In addition, it adds 2 to its Strength when making ramming attacks against fortifications.</description>
+    </rule>
+    <rule name="Assault Drill" id="3bc8-7136-36f2-b714" hidden="false">
+      <description>* May not carry models with the Bulky, Very Bulky or Extremely Bulky special rules
+
+** In practice you may choose to open and embar/disembark from a single hatch on either side of the hull.</description>
+    </rule>
+    <rule name="Death From Below" id="509b-c14d-788b-f042" hidden="false">
+      <description>Instead of the usual rules for Deep Striking, when a Subterranean Assault vehicle enters play via Deep Strike, place a Large Blast (5&quot;)
+marker on the table and scatter this to determine the final position of its arrival as per the Deep Strike special rule.
+
+Should this marker scatter on top of impassable terrain, a building, ruin, fortification, vehicle or any unit engaged in combat, reduce
+the scatter distance by the minimum required to avoid the obstacle. If the marker representing the arrival of the Termite was
+displaced in this way by a vehicle or fortification, the closest vehicle or fortification to the marker immediately suffers a Str 10 AP- hit
+– vehicles are hit on their Side armour. If the arrival of the Termite was instead displaced by any units engaged in close combat, all
+units in that combat suffer D6 Str 6 AP 4 hits. After the final position of the marker is determined, if the marker covers or touches any
+enemy or friendly unit, then that unit also suffers D6 Str 6 AP 4 hits.
+
+After all damage is resolved, the Subterranean Assault vehicle may be placed in any orientation so long as the centre of the Large Blast
+(5&quot;) marker is underneath part of the vehicle’s hull and it remains 1&quot; away from any fortification, vehicle or unit engaged in combat.
+The area under the Large Blast (5&quot;) marker is now difficult terrain for the rest of the game. Players may, should they wish to, instead
+represent this area with a piece of crater terrain.
+
+Should a Subterranean Assault vehicle be placed on top of any unit which does not pose an obstacle to its arrival as described above,
+the Death from Below special rule allows it to be placed as though the unit was not there. If some models in the unit would end up
+underneath the Subterranean Assault vehicle when it reaches its final position (it makes no difference whether the unit is Falling
+Back or not), these models must be moved by the controlling player out of the way by the shortest distance, leaving at least 1&quot; between
+them and the Subterranean Assault vehicle (and indeed any other unit) whilst maintaining unit coherency and staying on the
+tabletop. Any models that cannot manage this are crushed and removed from play as casualties with no saves allowed.</description>
+    </rule>
+    <rule name="Subterranean Assault" id="6b05-d71d-5142-e8dc" hidden="false">
+      <description>Should the Termite Assault Drill, and any unit it transports, enter play using the Deep Strike special rule, they count as being a
+Subterranean Assault vehicle for the wider use of the Subterranean Assault rule for your army. At the beginning of the controlling
+player’s first turn, they must choose half of their Subterranean Assault vehicles held in reserve for the purpose of Deep Striking
+(rounding up) to make a Subterranean Assault. These units arrive on the controlling player’s first player turn. The arrival of any
+remaining Subterranean Assault vehicles in the player’s force is rolled for as usual for the mission.
+
+This rule, while similar in function to the Drop Pod Assault special rule, does not interact with it for the purposes of calculating how
+many units may arrive on the table by Deep Strike. Armies may consist of units with both the Drop Pod Assault and Subterranean
+Assault rules unless otherwise noted.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="a80b-4a31-6a1b-db86" name="Daemonic Possession" hidden="false" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item">
@@ -10565,4 +10377,7 @@ At the end of the phase, roll a D6, on a 1 the unit loses a HP with no saves all
       </characteristics>
     </profile>
   </sharedProfiles>
+  <infoLinks>
+    <infoLink name="Deep Strike" id="328f-dd28-2141-1fe8" hidden="false" targetId="5de7-dbec-8706-f21a" type="rule"/>
+  </infoLinks>
 </catalogue>
