@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="a773-03a1-5b4e-2bc0" name="Grunt Squad" hidden="false" collective="false" import="true" targetId="f600-c88f-4166-4d69" type="selectionEntry">
       <categoryLinks>
@@ -682,13 +682,6 @@
           </profiles>
           <selectionEntries>
             <selectionEntry id="0716-18b9-8d54-f753" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="ed8b-9128-07ad-2085" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe47-4d10-becf-20c0" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a1c-c3f2-c07e-7f68" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8df4-2abd-88d8-5dc6" type="min"/>
@@ -715,9 +708,34 @@
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Each Zealot may replace their Plasma Pistol with an Energy Sword" hidden="false" id="0fde-52a6-a4db-8033">
+              <profiles>
+                <profile name="Energy Sword" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="1ffe-e59b-bc3f-1b61">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Duelist&apos;s Edge (1), Murderous Strike (6+), Specialist Weapon, Lunge</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="13"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="2ef0-5d8a-9215-251f"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="2ef0-5d8a-9215-251f">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="ed8b-9128-07ad-2085" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup id="cac9-d831-bb90-5b2a" name="May select up to 2 Weapons:" hidden="false" collective="false" import="true" defaultSelectionEntryId="86b2-8382-02cd-0544">
+            <selectionEntryGroup id="cac9-d831-bb90-5b2a" name="Each Zealot may take:" hidden="false" collective="false" import="true" defaultSelectionEntryId="86b2-8382-02cd-0544">
               <selectionEntries>
                 <selectionEntry id="86b2-8382-02cd-0544" name="Energy Sword" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
@@ -730,24 +748,6 @@
                       </characteristics>
                     </profile>
                   </profiles>
-                  <rules>
-                    <rule id="5fa6-f502-c70d-52e2" name="Lunge" hidden="false">
-                      <description>A model with an Energy sword may add +2 to it&apos;s charge value. On the first round of combat, add +1 to the attacks characteristic of a model with this weapon.</description>
-                    </rule>
-                  </rules>
-                  <infoLinks>
-                    <infoLink id="1750-3fe2-77c4-ca21" name="Duelist&apos;s Edge" hidden="false" targetId="5ea7-cc60-0984-3cc0" type="rule">
-                      <modifiers>
-                        <modifier type="set" field="name" value="Duelist&apos;s Edge (1)"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink id="bb63-2194-69ec-bc2b" name="Murderous Strike" hidden="false" targetId="3868-1cb3-eb8e-88f4" type="rule">
-                      <modifiers>
-                        <modifier type="set" field="name" value="Murderous Strikes (6+)"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink id="e14a-5195-5f05-eca0" name="Specialist Weapon" hidden="false" targetId="eb86-e6c7-073c-5338" type="rule"/>
-                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
                   </costs>
@@ -783,9 +783,6 @@
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Fuel Rod Gun" hidden="false" id="0f22-4a67-4e30-acd8" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b61-ac9c-061b-b486" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
                   <profiles>
                     <profile name="Fuel Rod Gun" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="1c1d-bdf6-20be-4eb9">
                       <characteristics>
@@ -800,11 +797,44 @@
                     <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Plasma Rifle" hidden="false" id="98f6-7b77-a5b9-1c09" collective="false">
+                  <costs>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Plasma Rifle" id="48a2-f96e-1216-9a36" hidden="false" type="profile" targetId="84c1-1ea0-c135-72d3"/>
+                  </infoLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Duel Wield" hidden="false" id="6633-e295-65df-d2ac" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec1f-e1c8-ef95-05ed" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Twin-Linked" id="7028-dd9f-3aa7-74df" hidden="false" targetId="753c-39ae-57f2-56db" type="rule"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntry>
               </selectionEntries>
               <constraints>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7970-7e31-8c85-157c"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2403-d1e0-046a-ecfa"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="7970-7e31-8c85-157c"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2403-d1e0-046a-ecfa"/>
               </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="7970-7e31-8c85-157c">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="ed8b-9128-07ad-2085" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="1" field="2403-d1e0-046a-ecfa">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="ed8b-9128-07ad-2085" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -829,34 +859,6 @@
               </modifiers>
             </entryLink>
           </entryLinks>
-          <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fe47-4d10-becf-20c0" name="May replace Plasma Pistol&apos;s with Plasma Rifles" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="e7de-8dcf-403a-b76a" value="5">
-              <repeats>
-                <repeat field="selections" scope="ed8b-9128-07ad-2085" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afe7-0d61-2012-eb7f" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="7114-d3d5-b8c8-f1a0" name="Plasma Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="386a-09d7-be8f-2ec1" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Plasma Rifle" id="49f5-e499-2ac3-7a65" hidden="false" type="profile" targetId="84c1-1ea0-c135-72d3"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
@@ -1373,12 +1375,12 @@ In addition, when resolving shooting attacks from the front arc, treat the model
           <profiles>
             <profile id="0380-fb66-acdc-3b23" name="Active Camoflage" hidden="false" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item">
               <characteristics>
-                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Active Camoflage confers the Stealth, Shrouded and Infiltrate Special rules. If a unit with Active Camoflage suffers a wound, they lose the effects of Active Camoflage for the rest of the turn.</characteristic>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Active Camoflage confers the Stealth (4), and Infiltrate Special rules. If a unit with Active Camoflage suffers a wound, they lose the effects of Active Camoflage for the rest of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="79f4-4106-bf4f-3bc2" name="Dropshield" hidden="false" collective="false" import="true" type="upgrade">
@@ -1388,7 +1390,7 @@ In addition, when resolving shooting attacks from the front arc, treat the model
           <profiles>
             <profile id="a665-8515-20d5-0638" name="Dropshield" hidden="false" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item">
               <characteristics>
-                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Once per game, a model with a Dropshield may choose to activate it. If it does so, place a 5&quot; blast marker directly under the model, with the model at it&apos;s centre. Any model within this blast marker may not be targeted by ranged weapons by models outside of the blast marker. This dropshield lasts until the end of the battleround.</characteristic>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Once per game, a model with a Dropshield may choose to activate it. If it does so, place a 5&quot; blast marker directly under the model, with the model at it&apos;s centre. Any model within this blast marker may not be targeted by ranged weapons by models outside of the blast marker and in addition, may not target enemy models outside this blast market.. This dropshield lasts until the end of the battleround.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1408,7 +1410,7 @@ In addition, when resolving shooting attacks from the front arc, treat the model
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="20"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e178-5a20-d151-f5fe" name="Armour Lock" hidden="false" collective="false" import="true" type="upgrade">
@@ -1418,12 +1420,15 @@ In addition, when resolving shooting attacks from the front arc, treat the model
           <profiles>
             <profile id="4193-a988-0494-327e" name="Armour Lock" hidden="false" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item">
               <characteristics>
-                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Instead of moving, a model with Armour lock may choose to activate it. If it does, it may not move or shoot this turn, but recieves a 2+ Invulnurable Save until the end of the battle round.</characteristic>
+                <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">Instead of moving, a model with Armour lock may choose to activate it. If it does, it may not move or shoot this turn, but recieves a 2+ Invulnurable Save until the end of the battle round.
+
+
+After being hit, but before Wound rolls are made, a model with the Armour Lock Armour Ability may choose to activate it. If it does, it recieves a 2+ Invulnurable Save until the end of the following turn however it may not move or shoot on the following turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b341-d485-3d2d-6240" name="Overshields" hidden="false" collective="false" import="true" type="upgrade">
@@ -1669,6 +1674,9 @@ The model may choose to fire an Overheated weapon regardless. If it chooses to d
       <description>A unit that includes one or more Huragok with this special rule increases its Energy Shielding by +1. If a model did not have an Energy Shield, it instead gains Energy Shielding (1).
 
 This bonus does not stack with itself — a unit may only benefit from one instance of State of Grace at any time, regardless of how many Huragok are attached to it.</description>
+    </rule>
+    <rule name="Lunge" id="ea4b-19bc-28de-06f8" hidden="false">
+      <description>A model with an Energy sword may add +2 to it&apos;s charge value. On the first round of combat, add +1 to the attacks characteristic of a model with this weapon.</description>
     </rule>
   </sharedRules>
 </catalogue>
